@@ -1,6 +1,16 @@
+import { HomePage } from './style';
+
+import { Header } from '../header/Header';
+
+
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Header />
+      <HomePage>
+        Home
+      </HomePage>
+    </>
   )
 }
