@@ -76,50 +76,53 @@ const slideUp = keyframes`
 `;
 
 export const HeaderMobileMenu = styled.nav`
-position: absolute;
-background-color: #999;
-height: 100vh;
-width: 100%;
-bottom: 0;
-left: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-opacity: .95;
-transform: translateY(-100%);
-animation-duration: 0.5s;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
-
-ul{
-  list-style: none;
-  text-align: center;
-  li{
-    margin-bottom: 1rem;
-    a{
-      text-decoration: none;
-      color: #000;
-      font-weight: 700;
-      font-size: 1.3rem;
+display: none;
+@media(max-width: 800px) {
+  position: absolute;
+  background-color: #999;
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: .95;
+  transform: translateY(-100%);
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  
+  ul{
+    list-style: none;
+    text-align: center;
+    li{
+      margin-bottom: 1rem;
+      a{
+        text-decoration: none;
+        color: #000;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
     }
   }
+  .closeBtn{
+    position: absolute;
+    bottom: 4rem;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+  }
+  &.menu-open {
+    animation-name: ${slideDown}; // Inicia a animação de descer
+  }
+  
+  &.menu-closed {
+    animation-name: ${slideUp}; // Inicia a animação de subir
+  }
+  
 }
-.closeBtn{
-  position: absolute;
-  bottom: 4rem;
-  background-color: transparent;
-  border: none;
-  font-size: 3rem;
-}
-&.menu-open {
-  animation-name: ${slideDown}; // Inicia a animação de descer
-}
-
-&.menu-closed {
-  animation-name: ${slideUp}; // Inicia a animação de subir
-}
-
 `;
 
 export const MobileButton = styled.div`
