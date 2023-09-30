@@ -51,4 +51,9 @@ position: absolute;
 top: 46px;
 right: 40px;
 cursor: pointer;
+
+@media (max-width: 500px){
+  font-size: 1.6rem;
+  top: 48px;
+}
 `;

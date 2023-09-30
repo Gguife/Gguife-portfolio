@@ -12,8 +12,8 @@ export const Home = () => {
       <HomePrincipalContent>
         <div className="home-desc">
           <span>Olá, me chamo <br /> <strong>Guilherme Gomes.</strong></span>
-          <p>Sou <strong>desenvolvedor web</strong>, com habilidades nas áreas <br /> <strong>Front-end</strong> e <strong>Back-end</strong></p>
-          <img src={Logo} alt="Logo" width={300} />
+          <p>Sou <strong>desenvolvedor web</strong>, especializado nas <br /> áreas <strong>Front-end</strong> e <strong>Back-end</strong></p>
+          <img src={Logo} alt="Logo" width={350} />
         </div>
       </HomePrincipalContent>
       <HomeBottomContainer>
