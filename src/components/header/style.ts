@@ -41,12 +41,11 @@ ul{
     a{
       text-decoration: none;
       font-size: 1rem;
-      font-weight: 700;
-      color: purple;
+      color: ${({theme}) => theme.text};
       transition: .3s;
       
       &:hover{
-        color: ${({theme}) => theme.text};
+        color: purple;
       }
     }
   }
@@ -88,11 +87,12 @@ display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: .95;
+  opacity: .98;
   transform: translateY(-100%);
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
+  z-index: 999;
   
   ul{
     list-style: none;
