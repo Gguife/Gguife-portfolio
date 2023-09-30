@@ -18,7 +18,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <div className="logo">
-        <img src={Logo} alt="logo da página" width={85}/>
+        <img src={Logo} alt="logo da página" width={65}/>
         <div className="linha-vertical"></div>
         <span>GGUIFE</span>
       </div>
