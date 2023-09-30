@@ -26,7 +26,15 @@ box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, r
   }
 }
 
-
+@media (max-width: 500px){
+  .logo{
+    gap: 5px;
+    margin-left: 0rem;
+    img{
+      width: 50px;
+    }
+  }
+}
 `;
 
 
@@ -137,6 +145,13 @@ display: none;
     border: 0;
     font-size: 2rem;
     color: ${({theme}) => theme.text};
+  }
+}
+
+@media (max-width: 500px){
+  margin-right: 3.5rem;
+  .openBtn{
+    font-size: 1.7rem;
   }
 }
 
