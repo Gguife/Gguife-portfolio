@@ -9,6 +9,7 @@ import { BsFillSunFill } from 'react-icons/bs';
 //Components
 import { Header } from "../components/header/Header";
 import { Home } from "../components/home/Home";
+import { About } from "../components/about/About";
 
 
 export const MainPage = () => {
@@ -36,6 +37,7 @@ export const MainPage = () => {
         <ButtonChange onClick={themeToggler}>{theme === 'light' ? <BsFillMoonFill  className='moonIcon' /> : <BsFillSunFill  className='sunIcon' />}</ButtonChange>
         <Header />
         <Home />
+        <About />
       </ThemeProvider>
     </>
   )
