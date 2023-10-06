@@ -48,7 +48,7 @@ padding: 20px;
     algin-items: start;
     justify-content: start;
     max-width: 400px;
-    height: 400px;
+    height: 360px;
     margin-bottom: 100px;
     padding: 30px;
     span{
