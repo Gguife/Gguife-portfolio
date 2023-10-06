@@ -6,6 +6,11 @@ position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
+
+@media (max-height: 550px) {
+  height: 30rem;
+}
+
 `;
 
 export const HomePrincipalContent = styled.div`
