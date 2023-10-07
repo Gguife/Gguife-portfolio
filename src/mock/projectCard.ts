@@ -77,15 +77,6 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 7,
-    imgPath: Plan,
-    title: "Plano",
-    description: "Plateforma de vendas de plano",
-    github: "https://github.com/Gguife/planPurchase",
-    web: "",
-    category: "Front-end"
-  },
-  {
-    id: 8,
     imgPath: Backend,
     title: "API livros",
     description: "API de livros DNC",
@@ -94,7 +85,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     category: "Back-end"
   },
   {
-    id: 9,
+    id: 8,
     imgPath: Backend,
     title: "Board Tasks",
     description: "Projeto BoardTasks",
@@ -103,7 +94,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     category: "Back-end"
   },
   {
-    id: 10,
+    id: 9,
     imgPath: Backend,
     title: "RESTful API",
     description: "Java RESTful API Back-end Santander.",
@@ -112,13 +103,12 @@ export const PROJECTS_MOCK: ProjectType[] = [
     category: "Back-end"
   },
   {
-    id: 11,
+    id: 10,
     imgPath: MecanicaMundial,
     title: "Mecânica Mundial",
     description: "Empresa Mecânica mundial",
     github: "",
     web: "https://mecanica-mundial.netlify.app/",
     category: "Clientes"
-  },
-  
+  }, 
 ]
