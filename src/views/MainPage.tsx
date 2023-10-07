@@ -10,6 +10,7 @@ import { BsFillSunFill } from 'react-icons/bs';
 import { Header } from "../components/header/Header";
 import { Home } from "../components/home/Home";
 import { About } from "../components/about/About";
+import { Projects } from "../components/projects/Projects";
 
 
 export const MainPage = () => {
@@ -38,6 +39,7 @@ export const MainPage = () => {
         <Header />
         <Home />
         <About />
+        <Projects />
       </ThemeProvider>
     </>
   )
