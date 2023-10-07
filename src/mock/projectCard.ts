@@ -91,7 +91,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "API de livros DNC",
     github: "https://github.com/Gguife/livrosDNC-Backend",
     web: "",
-    category: "Front-end"
+    category: "Back-end"
   },
   {
     id: 9,
@@ -100,7 +100,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Projeto BoardTasks",
     github: "https://github.com/Gguife/BoardTasks-back",
     web: "",
-    category: "Front-end"
+    category: "Back-end"
   },
   {
     id: 10,
@@ -109,7 +109,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Java RESTful API Back-end Santander.",
     github: "https://github.com/Gguife/RESTful-API-Dio",
     web: "",
-    category: "Front-end"
+    category: "Back-end"
   },
   {
     id: 11,
