@@ -32,24 +32,6 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 2,
-    imgPath: Ggf,
-    title: "GGF",
-    description: "Plataforma de anúncios",
-    github: "https://github.com/Gguife/OlxClone-GGF",
-    web: "",
-    category: "Front-end"
-  },
-  {
-    id: 3,
-    imgPath: EcommerceDNC,
-    title: "E-commerce DNC",
-    description: "Plataforma de E-commerce",
-    github: "https://github.com/Gguife/E-commerce-DNC",
-    web: "",
-    category: "Front-end"
-  },
-  {
-    id: 4,
     imgPath: PhoneStore,
     title: "Loja de Celulares",
     description: "Plataforma de venda de Celulares",
@@ -58,12 +40,30 @@ export const PROJECTS_MOCK: ProjectType[] = [
     category: "Front-end"
   },
   {
-    id: 5,
+    id: 3,
     imgPath: Clima,
     title: "Climas",
     description: "Informações sobre o clima",
     github: "https://github.com/Gguife/Clima-JS",
     web: "https://gguife.github.io/Clima-JS/",
+    category: "Front-end"
+  },
+  {
+    id: 4,
+    imgPath: Ggf,
+    title: "GGF",
+    description: "Plataforma de anúncios",
+    github: "https://github.com/Gguife/OlxClone-GGF",
+    web: "",
+    category: "Front-end"
+  },
+  {
+    id: 5,
+    imgPath: EcommerceDNC,
+    title: "E-commerce DNC",
+    description: "Plataforma de E-commerce",
+    github: "https://github.com/Gguife/E-commerce-DNC",
+    web: "",
     category: "Front-end"
   },
   {
@@ -97,7 +97,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     id: 9,
     imgPath: Backend,
     title: "RESTful API",
-    description: "Java RESTful API Back-end Santander.",
+    description: "Java RESTful API Back-end Santander",
     github: "https://github.com/Gguife/RESTful-API-Dio",
     web: "",
     category: "Back-end"
