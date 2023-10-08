@@ -4,7 +4,6 @@ export const ProjectSection = styled.section`
 max-width: 1200px;
 margin: 0 auto;
 padding: 2rem 0;
-height: 55vw;
 
 h1{
   text-align: center;
