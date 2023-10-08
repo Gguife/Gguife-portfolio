@@ -11,6 +11,7 @@ import { Header } from "../components/header/Header";
 import { Home } from "../components/home/Home";
 import { About } from "../components/about/About";
 import { Projects } from "../components/projects/Projects";
+import { Langs } from "../components/lang/Langs";
 
 
 export const MainPage = () => {
@@ -40,6 +41,7 @@ export const MainPage = () => {
         <Home />
         <About />
         <Projects />
+        <Langs />
       </ThemeProvider>
     </>
   )
