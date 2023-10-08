@@ -18,7 +18,7 @@ export const Projects = () =>{
     (project) => project.category === activeTab
   );
   return (
-    <ProjectSection>
+    <ProjectSection id="projetos">
       <h1>Meus Projetos</h1>
       <ProjectButton>
         <button onClick={() => handleTabClick("Front-end")} className={activeTab === "Front-end" ? "active-button" : ""}>Front-end</button>
