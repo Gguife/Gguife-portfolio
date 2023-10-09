@@ -12,6 +12,7 @@ import { Home } from "../components/home/Home";
 import { About } from "../components/about/About";
 import { Projects } from "../components/projects/Projects";
 import { Langs } from "../components/lang/Langs";
+import { Contact } from "../components/contact/Contact";
 
 
 export const MainPage = () => {
@@ -42,6 +43,7 @@ export const MainPage = () => {
         <About />
         <Projects />
         <Langs />
+        <Contact />
       </ThemeProvider>
     </>
   )
