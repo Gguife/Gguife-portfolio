@@ -23,7 +23,7 @@ export const Home = () => {
           <li><a href="https://www.linkedin.com/in/guilherme-gomes-b09444254/" target='__blank'><FiLinkedin /></a></li>
         </ul>
         <div className="fale-comigo">
-          <a href='#contact'>Fale <br /> Comigo <hr /></a>
+          <a href='#contato'>Fale <br /> Comigo <hr /></a>
           <Player
             src='https://lottie.host/cae1dc39-3c4c-44ca-a0e7-a491a3672fe4/13yVWciwVB.json'
             className="talkToMe"
