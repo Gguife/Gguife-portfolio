@@ -79,7 +79,7 @@ export const Contact = () =>{
             required
             />
             <label htmlFor="textarea">Mensagem</label>
-            <textarea name="textarea" id='textarea' cols={30} rows={10} className='contact-form-input' placeholder='Vamos conversar' required></textarea>
+            <textarea name="textarea" id='textarea' cols={30} rows={7} className='contact-form-input' placeholder='Vamos conversar' required></textarea>
             <button className="button button--flex" onClick={handleSendClick} type="submit">Enviar</button>
           </form>
         </ContactRightSide>

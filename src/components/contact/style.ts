@@ -55,7 +55,7 @@ h2{
 }
 p{
   font-size: .7rem;
-  width: 70%;
+  width: 90%;
   padding: .5rem 0;
 }
 a{
@@ -84,29 +84,29 @@ form{
   padding: 0 1rem;
 
   input, textarea{
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     padding: .5rem;
     border: 2px solid #000;
-    border-radius: 20px;
+    border-radius: 15px;
     resize: none;
-    background-color: transparent;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     &:focus {
       outline: none;
       box-shadow: 0 0 5px purple; 
     }
+
     &::placeholder {
       font-family: 'Poppins', sans-serif;
       font-size: .7rem;
-      padding: 0 .5rem;
-      color: purple;
+      padding: 0 .3rem;
+      color: #000;
     }
   }
 
   label{
-    font-size: .8rem;
-    padding: 0 .5rem;
+    font-size: .75rem;
+    padding: 0 1rem;
+    font-weight: 700;
   }
 
   button{
