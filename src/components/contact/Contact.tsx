@@ -60,7 +60,7 @@ export const Contact = () =>{
   };
   
   return (
-    <ContactSection>
+    <ContactSection id="contato">
       <ContactContainer>
         <ContactLeftSide>
           <h2>Vamos nos Conectar</h2>
