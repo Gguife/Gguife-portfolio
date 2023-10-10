@@ -6,6 +6,9 @@ export default createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  scroll-behavior: smooth;
+}
 body{
   background: ${({theme}) => theme.body};
   color: ${({theme}) => theme.text}; 
