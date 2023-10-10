@@ -50,6 +50,15 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 4,
+    imgPath: Plan,
+    title: "Plano",
+    description: "Plateforma de vendas de plano",
+    github: "https://github.com/Gguife/planPurchase",
+    web: "https://plan-gamma.vercel.app/",
+    category: "Front-end"
+  },
+  {
+    id: 5,
     imgPath: Ggf,
     title: "GGF",
     description: "Plataforma de anúncios",
@@ -58,20 +67,11 @@ export const PROJECTS_MOCK: ProjectType[] = [
     category: "Front-end"
   },
   {
-    id: 5,
+    id: 6,
     imgPath: EcommerceDNC,
     title: "E-commerce DNC",
     description: "Plataforma de E-commerce",
     github: "https://github.com/Gguife/E-commerce-DNC",
-    web: "",
-    category: "Front-end"
-  },
-  {
-    id: 6,
-    imgPath: Plan,
-    title: "Plano",
-    description: "Plateforma de vendas de plano",
-    github: "https://github.com/Gguife/planPurchase",
     web: "",
     category: "Front-end"
   },
