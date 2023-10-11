@@ -13,6 +13,7 @@ import { About } from "../components/about/About";
 import { Projects } from "../components/projects/Projects";
 import { Langs } from "../components/lang/Langs";
 import { Contact } from "../components/contact/Contact";
+import { ScrollUp } from "../components/scrollUp/ScrollUp";
 
 
 export const MainPage = () => {
@@ -44,6 +45,7 @@ export const MainPage = () => {
         <Projects />
         <Langs />
         <Contact />
+        <ScrollUp />
       </ThemeProvider>
     </>
   )
