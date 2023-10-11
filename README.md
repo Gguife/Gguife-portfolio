@@ -19,8 +19,9 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [React](https://pt-br.reactjs.org/)
-- [styled-components](https://styled-components.com/)
+- React
+- TypeScript
+- Style-components
 
 ### Pré-requisitos
 
