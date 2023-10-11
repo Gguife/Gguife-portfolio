@@ -1,19 +1,20 @@
 
-# Gguife Portfolio
+# Gguife Portfolio 💻
 <p align="center">Criação do meu portfolio para mostrar um pouco do meu conhecimento.</p>
 
 
 <h3>O que o site contém?</h3>
 
 - [x] Site totalmente responsivo e intuitivo.
-- [x] Um pouco sobre mim e sobre  os projetos já realizados.
-- [x] Todos os meus dados facilitando você a entrar em contato comigo.
+- [x] Um pouco sobre mim, minha trajetoria e estudos.
+- [x] Alguns dos meus projetos já realizados.
+- [x] Todas minhas redes sociais para que possa entrar em contato comigo.
 
-<hr>
+## Layout 🎨
 <h1 align="center">
   <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/assets/portoflioImg.png" width='90%' />
+  <a href="https://gguife.vercel.app/"> Gguife</a>
 </h1>
-<p>Clicando aqui você é direcionado ao site:<a href="https://gguife.vercel.app/"> Gguife</a></p>
 
 ### 🛠 Tecnologias
 
