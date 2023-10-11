@@ -85,9 +85,9 @@ form{
 
   input, textarea{
     margin-bottom: 1rem;
-    padding: .5rem;
+    padding: .8rem;
     border: 2px solid #000;
-    border-radius: 15px;
+    border-radius: 10px;
     resize: none;
 
     &:focus {
@@ -97,9 +97,9 @@ form{
 
     &::placeholder {
       font-family: 'Poppins', sans-serif;
-      font-size: .7rem;
-      padding: 0 .3rem;
-      color: #000;
+      font-size: .9rem;
+      padding: 0 .2rem;
+      color: #999;
     }
   }
 
@@ -111,7 +111,7 @@ form{
 
   button{
     background-color: purple;
-    padding: .5rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
     color: #FFF;
@@ -119,8 +119,7 @@ form{
     transition: .4s;
 
     &:hover{
-      background-color: ;
-      color: ;
+      opacity: .7;
     }
   }
 }
