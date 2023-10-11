@@ -16,7 +16,7 @@ export const Header = () => {
   
 
   return (
-    <HeaderContainer>
+    <HeaderContainer id="home">
       <div className="logo">
         <img src={Logo} alt="logo da página" width={65}/>
         <div className="linha-vertical"></div>
@@ -24,7 +24,6 @@ export const Header = () => {
       </div>
       <HeaderMenu>
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -33,7 +32,6 @@ export const Header = () => {
       {/*Mobile*/}
       <HeaderMobileMenu className={menuOpen ? 'menu-open' : 'menu-closed'}>
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato">Contato</a></li>
