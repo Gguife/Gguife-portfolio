@@ -138,7 +138,7 @@ ul{
   ul{
     margin-bottom: 15px;
     li{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding: 5px;
     }
   }
