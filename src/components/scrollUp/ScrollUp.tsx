@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './scrollUp.css';
+import './ScrollUp.css';
 //ICON
 import{ BiSolidUpArrowSquare } from 'react-icons/bi';
 
