@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LangContainer = styled.div`
 background-color: purple;
 color: #FFF;
-margin: 3rem 0;
+margin: 4rem 0 0 0;
 padding: .5rem;
 
 `;
