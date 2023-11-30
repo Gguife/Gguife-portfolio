@@ -4,19 +4,18 @@ export const LangContainer = styled.div`
 background-color: purple;
 color: #FFF;
 margin: 3rem 0;
-padding: .5rem; 
+padding: .5rem;
+
 `;
 
 export const LangsCard = styled.div`
 display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 align-items: center;
-justify-content: center;
-font-size: 1rem;
-gap: 1rem;
+width: 100%;
+margin: 0;
 
-.lang-icon{
-  padding: .3rem 0;
-}
 
 @media (max-width: 600px){
   font-size: .5rem; 
