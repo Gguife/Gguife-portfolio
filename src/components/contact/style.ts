@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const ContactSection = styled.section`
 padding: 2rem 1rem;
 position: relative;
+background-color: #333;
+color: #FFF;
 
 .msg-error{
   display: none;
@@ -36,9 +38,9 @@ position: relative;
 
 export const ContactContainer = styled.div`
 display: flex;
-justify-content: center; 
-max-width: 900px;
-margin: 0 auto;
+max-width: 1000px; 
+margin: 3rem auto;
+gap: 2rem;
 
 @media(max-width: 700px){
 flex-direction: column;
@@ -59,7 +61,7 @@ p{
   padding: .5rem 0;
 }
 a{
-  color: ${({theme}) => theme.text};
+  color: #FFF;
   font-size: 1.2rem;
   transition: .3s;
   margin-right: .5rem;
@@ -86,7 +88,7 @@ form{
   input, textarea{
     margin-bottom: 1rem;
     padding: .8rem;
-    border: 2px solid #000;
+    border: 2px solid #333;
     border-radius: 10px;
     resize: none;
 
