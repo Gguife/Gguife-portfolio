@@ -1,17 +1,10 @@
 import { HeaderContainer, HeaderMenu } from "./style";
-import { useState } from "react";
 
 //Icon && Logo
 import Logo from "../../assets/logo.png";
 
 
 export const Header = () => {
-  const [ menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenuOpen = () =>{
-    setMenuOpen(!menuOpen);
-  }
-  
 
   return (
     <HeaderContainer id="home">
