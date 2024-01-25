@@ -58,8 +58,10 @@ padding-top: 3rem;
 
 .desc-sobremim{
     padding: 10px;
+    
     p{
         font-size: .9rem;
+        margin: 5px 0;
     }
 }
 
@@ -80,6 +82,15 @@ padding-top: 3rem;
     p{
         font-size: .6rem;
     }
+
+    .desc-sobremim{
+        padding: 10px;
+        
+        p{
+            font-size: .8rem;
+        }
+    }
+    
 }
 `;
 

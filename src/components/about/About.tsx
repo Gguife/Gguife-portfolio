@@ -11,13 +11,15 @@ const TAB_DATA = [
       id: "Skills",
       content: (
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML / CSS</li>
             <li>JavaScript</li>
-            <li>React</li>
             <li>TypeScript</li>
+            <li>React</li>
+            <li>Nextjs</li>
             <li>Nodejs</li>
             <li>SQL(MySQL) e NoSQL(MongoDB)</li>
+            <li>Docker</li>
+            <li>Java</li>
         </ul>
       ),
     },
@@ -36,9 +38,13 @@ const TAB_DATA = [
       id: "Certificado",
       content: (
         <ul>
-            <li>Bootcamp Java back-end - Santander Dio</li>
+            <li>Bootcamp Java Back-end - Santander Dio</li>
             <li>Web Responsive - FreeCodeCamp</li>
             <li>Tecnologia da Informação - SENAI</li>
+            <li>Criação de Websites - SENAC</li>
+            <li>Design de WebSites - IM</li>
+            <li>Desenvolvimento Full-stack - DNC</li>
+            <li>Programação Orientada a Objetos com JAVA - Dio</li>
         </ul>
       ),
     },
@@ -70,7 +76,18 @@ const handleTabClick = (title: string) => {
                     <motion.div variants={item} >
                         <div className="desc-sobremim">
                             <h1>Sobre Mim</h1>
-                            <p>Sou um desenvolvedor full stack apaixonado por criar aplicações web interativas e responsivas. Possuo uma sólida experiência na utilização de tecnologias como JavaScript, React, Redux, Node.js, Express, MongoDB, SQL, HTML, CSS e Git. Estou constantemente em busca de expandir meu conjunto de conhecimentos e competências. Além disso, sou altamente colaborativo e entusiasta em relação ao trabalho em equipe, ansioso para colaborar com outros profissionais na criação de aplicativos excepcionais.</p>
+                            <p>
+                                Sou um estudante de Engenharia de Software e formado em Desenvolvimento Web Full-stack na Escola DNC.
+                            </p>
+                            <p>
+                                Sou um apaixonado e criador de experiências digitais maravilhosas. 
+                                Meus conhecimentos vão da área Frontend com Reactjs, Nextjs, Backend com nodejs e gerenciamento de banco de dados SQL e NoSQL. <br/>
+                            </p>
+                            <p>  
+                                Estou pronto para desafios, a pressão e o desafio constate é o que me move, gosto de sempre entregar o
+                                melhor do meu trabalho, sempre estou em busca de
+                                soluções criativas e eficazes.
+                            </p>
                         </div>
                         <div className="desc-estudos">
                         {TAB_DATA.map((tab) =>(
