@@ -1,7 +1,7 @@
 import GguifeMovies from "../assets/Gguife-movies.png";
 import Ggf from "../assets/GGF.png";
 import EcommerceDNC from "../assets/E-commerce.png";
-import PhoneStore from "../assets/phone-store.png"
+import Naped from "../assets/naped.png";
 import Plan from "../assets/plan.png";
 import Backend from "../assets/backend.png";
 import MecanicaMundial from "../assets/mecanica-mundial.png";
@@ -23,11 +23,11 @@ export interface ProjectType{
 export const PROJECTS_MOCK: ProjectType[] = [
   {
     id: 1,
-    imgPath: GguifeMovies,
-    title: "Gguife Movies",
-    description: "Filmes em cartaz",
-    github: "https://github.com/Gguife/Movie-list",
-    web: "https://movie-list-mauve.vercel.app/",
+    imgPath: Naped,
+    title: "Naped",
+    description: "Sua plataforma de entretenimento",
+    github: "https://github.com/Gguife/Naped",
+    web: "https://naped-nine.vercel.app/",
     category: "Front-end"
   },
   {
@@ -113,11 +113,11 @@ export const PROJECTS_MOCK: ProjectType[] = [
   }, 
   {
     id: 11,
-    imgPath: PhoneStore,
-    title: "Loja de Celulares",
-    description: "Plataforma de venda de Celulares",
-    github: "https://github.com/Gguife/celular-store",
-    web: "https://celular-store.vercel.app/",
+    imgPath: GguifeMovies,
+    title: "Gguife Movies",
+    description: "Filmes em cartaz",
+    github: "https://github.com/Gguife/Movie-list",
+    web: "https://movie-list-mauve.vercel.app/",
     category: "Front-end"
   },
 ]
