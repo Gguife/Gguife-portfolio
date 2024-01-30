@@ -1,6 +1,6 @@
 import GguifeMovies from "../assets/Gguife-movies.png";
 import Ggf from "../assets/GGF.png";
-import EcommerceDNC from "../assets/E-commerce.png";
+import Rachi from "../assets/Rachi.png";
 import Naped from "../assets/naped.png";
 import Plan from "../assets/plan.png";
 import Backend from "../assets/backend.png";
@@ -59,11 +59,11 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 5,
-    imgPath: EcommerceDNC,
-    title: "E-commerce DNC",
-    description: "Plataforma de E-commerce",
-    github: "https://github.com/Gguife/E-commerce-DNC",
-    web: "",
+    imgPath: Rachi,
+    title: "Rachi",
+    description: "Tudo em um só lugar",
+    github: "https://github.com/Gguife/Rachi",
+    web: "https://gguife.github.io/Rachi/",
     category: "Front-end"
   },
   {
