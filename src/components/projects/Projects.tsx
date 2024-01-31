@@ -45,9 +45,6 @@ export const Projects = () => {
           <button onClick={() => handleTabClick("Back-end")} className={activeTab === "Back-end" ? "active-button" : ""}>
             Back-end
           </button>
-          <button onClick={() => handleTabClick("Clientes")} className={activeTab === "Clientes" ? "active-button" : ""}>
-            Clientes
-          </button>
         </ProjectButton>
         <ProjectCard>
           {filteredProjects.length > 0 ? (

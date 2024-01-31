@@ -100,7 +100,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Empresa Mecânica mundial",
     github: "",
     web: "https://mecanica-mundial.netlify.app/",
-    category: "Clientes"
+    category: "Front-end"
   }, 
   {
     id: 10,
