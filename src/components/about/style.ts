@@ -14,7 +14,10 @@ background-color: #333;
 color: #FFF;
 
 @media(max-width: 1000px){
-    height: 50rem;
+  height: 57rem;
+}
+@media(max-width: 800px){
+  height: 50rem;
 }
 `;
 
@@ -72,25 +75,24 @@ padding-top: 3rem;
 }
 
 @media(max-width: 1000px){
-    padding-top: 0rem;
+  padding-top: 0rem;
+
+  .desc-sobremim{
+
+    p{
+      font-size: .8rem;
+    }
+  }
 }
 
 @media(max-width: 500px){
-    h1{
-        font-size: 1.3rem;
-    }
-    p{
-        font-size: .6rem;
-    }
-
-    .desc-sobremim{
-        padding: 10px;
-        
-        p{
-            font-size: .8rem;
-        }
-    }
-    
+  h1{
+    font-size: 1.3rem;
+  }
+  p{
+    font-size: .6rem;
+  }
+ 
 }
 `;
 
