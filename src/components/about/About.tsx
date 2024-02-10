@@ -15,11 +15,12 @@ const TAB_DATA = [
       <li>JavaScript</li>
       <li>TypeScript</li>
       <li>React</li>
-      <li>Nextjs</li>
-      <li>Nodejs</li>
-      <li>SQL(MySQL) e NoSQL(MongoDB)</li>
+      <li>Node.js</li>
+      <li>SQL (MySQL / PostgreSQL)</li>
+      <li>NoSQL (MongoDB)</li>
+      <li>Git</li>
       <li>Docker</li>
-      <li>Java</li>
+      <li>Linux</li>
     </ul>
   ),
   },
@@ -28,7 +29,7 @@ const TAB_DATA = [
     id: "Academico",
     content: (
     <ul>
-      <li>Engenharia de Software - Estácio</li>
+      <li>Engenharia de Software (EAD) - Estácio</li>
       <li>Formação em Tecnologia - Escola DNC</li>
     </ul>
     ),
@@ -43,7 +44,8 @@ const TAB_DATA = [
         <li>Tecnologia da Informação - SENAI</li>
         <li>Criação de Websites - SENAC</li>
         <li>Design de WebSites - IM</li>
-        <li>Desenvolvimento Full-stack - DNC</li>
+        <li>Desenvolvimento Full-stack - Escola DNC</li>
+        <li>Versionamento Git - Escola DNC</li>
         <li>Programação Orientada a Objetos com JAVA - Dio</li>
       </ul>
     ),
@@ -77,16 +79,16 @@ const handleTabClick = (title: string) => {
                 <div className="desc-sobremim">
                     <h1>Sobre Mim</h1>
                     <p>
-                        Sou um estudante de Engenharia de Software e formado em Desenvolvimento Web Full-stack na Escola DNC.
+                      Sou um estudante de Engenharia de Software e formado em Desenvolvimento Web Full-stack na Escola DNC.
                     </p>
                     <p>
-                        Sou um apaixonado e criador de experiências digitais maravilhosas. 
-                        Meus conhecimentos vão da área Frontend com Reactjs, Nextjs, Backend com nodejs e gerenciamento de banco de dados SQL e NoSQL. <br/>
+                      Sou um apaixonado e criador de experiências digitais maravilhosas. 
+                      Meus conhecimentos vão da área Frontend com Reactjs, Nextjs, Backend com nodejs e gerenciamento de banco de dados SQL e NoSQL. <br/>
                     </p>
                     <p>  
-                        Estou pronto para desafios, a pressão e o desafio constate é o que me move, gosto de sempre entregar o
-                        melhor do meu trabalho, sempre estou em busca de
-                        soluções criativas e eficazes.
+                      Estou pronto para desafios, a pressão e o desafio constate é o que me move, gosto de sempre entregar o
+                      melhor do meu trabalho, sempre estou em busca de
+                      soluções criativas e eficazes.
                     </p>
                 </div>
                 <div className="desc-estudos">
