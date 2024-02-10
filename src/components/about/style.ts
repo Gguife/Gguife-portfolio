@@ -57,10 +57,10 @@ width: 100%;
 export const AboutContentDesc = styled.div`
 width: 100%;
 position: relative;
-padding-top: 3rem;
+padding-top: 1rem;
 
 .desc-sobremim{
-    padding: 10px;
+  padding: 10px;
     
     p{
         font-size: .9rem;
