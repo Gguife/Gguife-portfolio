@@ -10,7 +10,6 @@ justify-content: center;
 @media (max-height: 550px) {
   height: 30rem;
 }
-
 `;
 
 export const HomePrincipalContent = styled.div`
@@ -35,6 +34,8 @@ padding: 20px;
 
   span{
     font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
   }
   img{
     position: absolute;
@@ -66,12 +67,47 @@ padding: 20px;
   }
 }
 
+@media(max-width: 500px){
+  .home-desc{
+    max-width: 350px;
+    height: 360px;
+
+    p{
+      font-size: 1.1rem;
+    }
+
+    img{
+      right: 0rem;
+      top: 13rem;  
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 390px){
+  .home-desc{
+
+    img{
+      right: 0rem;
+      top: 13rem;  
+      max-width: 220px;
+      width: 100%;
+    }
+  }
+}
+
 @media(max-width: 380px){
   .home-desc{
+    max-width: 300px;
+    height: 340px;
+    p{
+      font-size: .9rem;
+    }
     img{
-      right: 2rem;
+      right: 0rem;
       top: 12rem;  
-      max-width: 250px;
+      max-width: 200px;
       width: 100%;
     }
   }

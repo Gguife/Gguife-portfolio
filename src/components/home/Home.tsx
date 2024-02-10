@@ -12,7 +12,7 @@ export const Home = () => {
       <HomePrincipalContent>
         <div className="home-desc">
           <span>Olá, me chamo <br /> <strong>Guilherme Gomes.</strong></span>
-          <p>Sou <strong>desenvolvedor web</strong>, especializado nas <br /> áreas <strong>Front-end</strong> e <strong>Back-end</strong></p>
+          <p>Sou um estudante de <strong>Engenharia de Software</strong>, <br /> com foco no <strong>Desenvolvimento Web</strong></p>
           <img src={Logo} alt="Logo" width={350} />
         </div>
       </HomePrincipalContent>
