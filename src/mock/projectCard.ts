@@ -2,7 +2,7 @@ import Kenai from "../assets/kenai.png";
 import Rachi from "../assets/Rachi.png";
 import Naped from "../assets/naped.png";
 import Plan from "../assets/plan.png";
-import Backend from "../assets/backend.png";
+import Backend from "../assets/code.png";
 import MecanicaMundial from "../assets/mecanica-mundial.png";
 import CodeNFT from "../assets/tela.png";
 
