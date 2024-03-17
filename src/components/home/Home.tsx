@@ -20,7 +20,7 @@ export const Home = () => {
         <ul>
           <li><a href="https://www.instagram.com/gguife/" target='__blank'><FiInstagram /></a></li>
           <li><a href="https://github.com/Gguife" target='__blank'><FiGithub /></a></li>
-          <li><a href="https://www.linkedin.com/in/guilherme-gomes-b09444254/" target='__blank'><FiLinkedin /></a></li>
+          <li><a href="https://www.linkedin.com/in/gguife/" target='__blank'><FiLinkedin /></a></li>
         </ul>
         <div className="fale-comigo">
           <a href='#contato'>Fale <br /> Comigo <hr /></a>
