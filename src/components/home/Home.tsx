@@ -1,4 +1,4 @@
-import { HomeBottomContainer, HomePage, HomePrincipalContent } from './style';
+import { HomeBottomContainer, HomePage, HomePrincipalContent, ScrollDown } from './style';
 //Icon && Image
 import Logo from '../../assets/logo.png';
 import {FiGithub, FiLinkedin, FiInstagram} from 'react-icons/fi';
@@ -12,7 +12,7 @@ export const Home = () => {
       <HomePrincipalContent>
         <div className="home-desc">
           <span>Olá, me chamo <br /> <strong>Guilherme Gomes.</strong></span>
-          <p>Sou um estudante de <strong>Engenharia de Software</strong>, <br /> com foco no <strong>Desenvolvimento Web</strong></p>
+          <p>Sou um estudante de <strong>Engenharia de Software</strong>, <br /> com habilidades voltadas ao <strong>Desenvolvimento Web</strong></p>
           <img src={Logo} alt="Logo" width={350} />
         </div>
       </HomePrincipalContent>
@@ -22,16 +22,15 @@ export const Home = () => {
           <li><a href="https://github.com/Gguife" target='__blank'><FiGithub /></a></li>
           <li><a href="https://www.linkedin.com/in/gguife/" target='__blank'><FiLinkedin /></a></li>
         </ul>
-        <div className="fale-comigo">
-          <a href='#contato'>Fale <br /> Comigo <hr /></a>
-          <Player
-            src='https://lottie.host/cae1dc39-3c4c-44ca-a0e7-a491a3672fe4/13yVWciwVB.json'
-            className="talkToMe"
-            loop
-            autoplay
-          />
-        </div>
       </HomeBottomContainer>
+      <ScrollDown>
+        <Player
+          src='https://lottie.host/4877e0b5-4fe2-495a-a326-4fb8d1fc3175/hPIriPX5Cw.json'
+          className="scroll-down"
+          loop
+          autoplay
+        />
+      </ScrollDown>
     </HomePage>
   )
 }
