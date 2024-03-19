@@ -113,7 +113,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
   {
     id: 11,
     imgPath: Backend,
-    title: "Integração e modelagem de dados de um produto digital",
+    title: "Produto digital",
     description: "Escola DNC",
     github: "https://github.com/Gguife/Ednc",
     web: "",
