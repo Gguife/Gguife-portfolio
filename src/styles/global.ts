@@ -23,6 +23,6 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
   border-radius: 10px;
-  background-color: purple;
+  background-color: #053B60;
 }
 `;
