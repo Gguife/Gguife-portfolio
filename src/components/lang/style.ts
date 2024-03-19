@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LangContainer = styled.div`
-background-color: purple;
+background-color: #053B60;
 color: #FFF;
 margin: 4rem 0 0 0;
 padding: .5rem;

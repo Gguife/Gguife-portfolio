@@ -20,7 +20,7 @@ gap: 3rem;
 button{
   padding: 1rem 1.5rem;
   background-color: ${({theme}) => theme.body};
-  border: 2px solid purple;
+  border: 2px solid #053B60;
   border-radius: 5px;
   color: ${({theme}) => theme.text};
   font-weight: 700;
@@ -30,7 +30,7 @@ button{
 }
 
 .active-button{
-  background-color: purple;
+  background-color: #053B60;
   color: #FFF;
 }
 
@@ -63,7 +63,7 @@ gap: 3rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   h3{
-    color: purple;
+    color: #053B60;
   }
   p{
 

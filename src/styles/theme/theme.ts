@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const lightTheme = {
-  body: "#BBB",
+  body: "#AAA",
   text: "#000"
 }
 
