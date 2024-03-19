@@ -78,8 +78,12 @@ padding: 20px;
     max-width: 330px;
     height: 330px;
     
+    span{
+      margin: .8rem 0 .5rem 0;
+      line-height: 2rem;
+    }
     p{
-      font-size: .8rem;
+      font-size: .71rem;
     }
     
     img{
@@ -142,8 +146,6 @@ ul{
       padding: 5px;
     }
   }
-}
-@media(max-width: 375px){
 }
 `;
 
