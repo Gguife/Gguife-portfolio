@@ -12,7 +12,7 @@
 
 ## Layout 🎨
 <h1 align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/assets/portoflioImg.png" width='90%' />
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./src/assets/gguife.png" width='90%' />
   <a href="https://gguife.vercel.app/"> Gguife</a>
 </h1>
 
