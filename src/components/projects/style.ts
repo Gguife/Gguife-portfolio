@@ -91,7 +91,18 @@ gap: 3rem;
   
   .project-card{
     width: 80%;
-  }
+    h3{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: .9rem;
+      margin: .2rem 0;
+    }
+    a{
+      font-size: 1.2rem;
+      padding-right: .5rem;      
+    }
   
+  }
 }
 `;
