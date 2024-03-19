@@ -62,19 +62,18 @@ gap: 3rem;
     border-radius: 3px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
+  
   h3{
-    color: #053B60;
+    color: #000;
   }
-  p{
 
-  }
   a{
     color: #000;
     font-size: 1.2rem;
     padding-right: 1rem;
     
     &:hover{
-      color: purple;
+      color: #4AAADA;
     }
   }
 }
