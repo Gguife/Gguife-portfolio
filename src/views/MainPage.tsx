@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import GlobalTheme from "../styles/global";
-//Dark mode styled-components
+
+//Dark mode styled-components and Button theme change
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from '../styles/theme/theme';
-import styled from "styled-components";
+import { lightTheme, darkTheme, ButtonChange } from '../styles/theme/theme';
 import { BsFillMoonFill } from 'react-icons/bs';
 import { BsFillSunFill } from 'react-icons/bs';
+
 //Components
 import { Header } from "../components/header/Header";
 import { Home } from "../components/home/Home";
@@ -38,8 +39,7 @@ export const MainPage = () => {
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalTheme />
-        <ButtonChange onClick={themeToggler}>{theme === 'light' ? <BsFillMoonFill  className='moonIcon' /> : <BsFillSunFill  className='sunIcon' />}</ButtonChange>
-        <Header />
+        <Header ThemeButton={<ButtonChange onClick={themeToggler}>{theme === 'light' ? <BsFillMoonFill  className='moonIcon' /> : <BsFillSunFill  className='sunIcon' />}</ButtonChange>} />
         <Home />
         <About />
         <Projects />
@@ -50,20 +50,3 @@ export const MainPage = () => {
     </>
   )
 }
-
-//Button change ThemeProvider
-const ButtonChange = styled.button`
-background-color: transparent;
-border: none; 
-color: ${({theme}) => theme.text};
-font-size: 2rem;
-position: absolute;
-top: 46px;
-right: 40px;
-cursor: pointer;
-
-@media (max-width: 500px){
-  font-size: 1.6rem;
-  top: 48px;
-}
-`;

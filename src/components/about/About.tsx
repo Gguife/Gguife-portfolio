@@ -1,26 +1,28 @@
 import { AboutContainer, AboutContentDesc, AboutContentImg, AboutSection, TabButton, TabContent} from "./style"
-import { Player } from '@lottiefiles/react-lottie-player';
+import SobrePic from "../../assets/groupAbout.png";
 import { useState } from "react";
 import Motion from "../Motion";
 import { motion } from "framer-motion";
 import { item } from "../../lib/Variants";
+import { FaFileAlt } from "react-icons/fa";
 
 const TAB_DATA = [
   {
-  title: "Skills",
-  id: "Skills",
+  title: "Habilidade",
+  id: "Habilidade",
   content: (
     <ul>
       <li>HTML / CSS</li>
       <li>JavaScript</li>
       <li>TypeScript</li>
       <li>React</li>
-      <li>Node.js</li>
+      <li>NodeJS</li>
       <li>SQL (MySQL / PostgreSQL)</li>
       <li>NoSQL (MongoDB)</li>
       <li>Git</li>
       <li>Docker</li>
       <li>Linux</li>
+      <li>Python</li>
     </ul>
   ),
   },
@@ -44,7 +46,7 @@ const TAB_DATA = [
         <li>Tecnologia da Informação - SENAI</li>
         <li>Criação de Websites - SENAC</li>
         <li>Design de WebSites - IM</li>
-        <li>Desenvolvimento Full-stack - Escola DNC</li>
+        <li>Desenvolvimento Full-stack(Frontend/Backend) - Escola DNC</li>
         <li>Versionamento Git - Escola DNC</li>
         <li>Programação Orientada a Objetos com JAVA - Dio</li>
       </ul>
@@ -54,7 +56,7 @@ const TAB_DATA = [
 
 
 export const About = () => {
-const [activeTab, setActiveTab] = useState("Skills");
+const [activeTab, setActiveTab] = useState("Habilidade");
 
 const handleTabClick = (title: string) => {
     setActiveTab(title);
@@ -64,31 +66,17 @@ const handleTabClick = (title: string) => {
       <AboutSection id="sobre">
         <Motion className="sobre-content" id="sobre">   
           <AboutContainer>
-            <motion.div variants={item} >
-              <AboutContentImg>
-                <Player
-                  src='https://lottie.host/7744b807-840a-4091-a435-71b21e843bb4/81EH49udnj.json'
-                  className="software"
-                  loop
-                  autoplay
-                />
-              </AboutContentImg>
-            </motion.div>
             <AboutContentDesc>
+              <h1>Sobre Mim</h1>
               <motion.div variants={item} >
                 <div className="desc-sobremim">
-                    <h1>Sobre Mim</h1>
                     <p>
-                      Sou um estudante de Engenharia de Software e formado em Desenvolvimento Web Full-stack na Escola DNC.
+                      Sou um desenvolvedor que amo criar sistesma Backend e layouts resposivos para frontend.
+                      Tenho experiência em criar sistemas rápidos e eficientes para diversas aplicações.
                     </p>
                     <p>
-                      Sou um apaixonado e criador de experiências digitais maravilhosas. 
-                      Meus conhecimentos vão da área Frontend com Reactjs, Nextjs, Backend com nodejs e gerenciamento de banco de dados SQL e NoSQL. <br/>
-                    </p>
-                    <p>  
-                      Estou pronto para desafios, a pressão e o desafio constate é o que me move, gosto de sempre entregar o
-                      melhor do meu trabalho, sempre estou em busca de
-                      soluções criativas e eficazes.
+                      Meus interesses estão no desenvolvimento de softwares e tenho uma grande paixão em Cibersegurança onde me envolvo, buscando aprender e me aprimorar de forma autônoma. 
+                      Costumo me ver como alguém que está sempre em desenvolvimento!
                     </p>
                 </div>
                 <div className="desc-estudos">
@@ -104,6 +92,12 @@ const handleTabClick = (title: string) => {
                 </div>
               </motion.div>
             </AboutContentDesc>
+            <motion.div variants={item} >
+              <AboutContentImg>
+                <img src={SobrePic} alt="Imagem ilustrativa" /> 
+                <button className="button-cv"><FaFileAlt /> Veja CV</button>
+              </AboutContentImg>
+            </motion.div>
           </AboutContainer>
         </Motion>
       </AboutSection>

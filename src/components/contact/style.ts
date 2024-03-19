@@ -112,7 +112,7 @@ form{
   }
 
   button{
-    background-color: purple;
+    background-color: #053B60;
     padding: 1rem;
     border: none;
     border-radius: 5px;
