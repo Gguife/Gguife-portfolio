@@ -95,9 +95,9 @@ export const PROJECTS_MOCK: ProjectType[] = [
   {
     id: 9,
     imgPath: Backend,
-    title: "Integração e modelagem de dados de um produto digital",
-    description: "Escola DNC",
-    github: "https://github.com/Gguife/Ednc",
+    title: "Finance API",
+    description: "Tudo em um só lugar",
+    github: "https://github.com/Gguife/finance-fullstack-api",
     web: "",
     category: "Back-end"
   }, 
@@ -109,5 +109,23 @@ export const PROJECTS_MOCK: ProjectType[] = [
     github: "https://github.com/Gguife/Rachi",
     web: "https://gguife.github.io/Rachi/",
     category: "Front-end"
+  },
+  {
+    id: 11,
+    imgPath: Backend,
+    title: "Integração e modelagem de dados de um produto digital",
+    description: "Escola DNC",
+    github: "https://github.com/Gguife/Ednc",
+    web: "",
+    category: "Back-end"
+  },
+  {
+    id: 12,
+    imgPath: Backend,
+    title: "API para Conversão monetária",
+    description: "Escola DNC",
+    github: "https://github.com/Gguife/Challenge-bravo",
+    web: "",
+    category: "Back-end"
   },
 ]
