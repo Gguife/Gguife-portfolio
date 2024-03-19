@@ -53,9 +53,12 @@ img{
   padding: .7rem 2rem;
   border-radius: 5px;
   font-weight: 700;
-  color: #4AAADA;
   cursor: pointer;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  a{
+    text-decoration: none;
+    color: #4AAADA;
+  }
 }
 
 @media(max-width: 900px){

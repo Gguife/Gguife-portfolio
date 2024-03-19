@@ -5,6 +5,7 @@ import Motion from "../Motion";
 import { motion } from "framer-motion";
 import { item } from "../../lib/Variants";
 import { FaFileAlt } from "react-icons/fa";
+import CV from "../../assets/cv.pdf";
 
 const TAB_DATA = [
   {
@@ -95,7 +96,7 @@ const handleTabClick = (title: string) => {
             <motion.div variants={item} >
               <AboutContentImg>
                 <img src={SobrePic} alt="Imagem ilustrativa" /> 
-                <button className="button-cv"><FaFileAlt /> Veja CV</button>
+                <button className="button-cv"><a href={CV} download={CV}><FaFileAlt /> Veja CV</a></button>
               </AboutContentImg>
             </motion.div>
           </AboutContainer>
