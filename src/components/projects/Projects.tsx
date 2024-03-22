@@ -15,6 +15,7 @@ type Project = {
   imgPath: string;
   title: string;
   description: string;
+  tools: string[];
   github: string;
   web: string;
 };
@@ -51,14 +52,24 @@ export const Projects = () => {
             filteredProjects.map((project) => (
               <motion.div key={project.id}  variants={item} className="project-card">
                 <img src={project.imgPath} alt="Imagem do Projeto" />
+                <div className="project-info">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <TbCode />
-                </a>
-                <a href={project.web} target="_blank" rel="noopener noreferrer">
-                  <TbWorldCode />
+                <p className="desc">{project.description}</p>
+                
+                </div>
+                <p className="tools">
+                  {project.tools.map((tool) => (
+                    <span key={tool} className={`tool-${tool.toLowerCase().replace(/\s+/g, '-')}`}>{tool}</span>
+                  ))}
+                </p>
+                <div className="links">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <TbCode />
                   </a>
+                  <a href={project.web} target="_blank" rel="noopener noreferrer">
+                    <TbWorldCode />
+                  </a>
+                </div>
               </motion.div>
             ))
           ) : (

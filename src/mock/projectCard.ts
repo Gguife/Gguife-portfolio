@@ -14,6 +14,7 @@ export interface ProjectType{
   imgPath: string,
   title: string,
   description: string,
+  tools: string[],
   github: string,
   web: string, 
   category: string
@@ -25,6 +26,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Kenai,
     title: "Kenai",
     description: "Serviço de streaming",
+    tools: ["react", "typescript", "axios", "react-icons","react-router-dom", "styled-components"],
     github: "https://github.com/Gguife/kenai",
     web: "https://kenai-murex.vercel.app",
     category: "Front-end"
@@ -34,6 +36,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: CodeNFT,
     title: "CodeNFT",
     description: "Landing Page de NFTs",
+    tools: [  "react","typescript", "CSS", "swiper", "framer-motion"],
     github: "https://github.com/Gguife/CodeNFT",
     web: "https://codenft-virid.vercel.app/",
     category: "Front-end"
@@ -43,6 +46,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Plan,
     title: "Plano",
     description: "Plateforma de vendas de plano",
+    tools: ["react", "CSS", "javascript", "react-router-dom"],
     github: "https://github.com/Gguife/planPurchase",
     web: "https://plan-gamma.vercel.app/",
     category: "Front-end"
@@ -52,6 +56,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: MecanicaMundial,
     title: "Mecânica Mundial",
     description: "Empresa Mecânica mundial",
+    tools: ["react", "typescript", "formspree", "phosphor-icons", "react-router-dom", "styled-components" ],
     github: "",
     web: "https://mecanica-mundial.netlify.app/",
     category: "Front-end"
@@ -61,6 +66,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "API livros",
     description: "API de livros DNC",
+    tools: ["nodejs", "express", "mongoose", "dotenv", "mongodb"],
     github: "https://github.com/Gguife/livrosDNC-Backend",
     web: "",
     category: "Back-end"
@@ -70,6 +76,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "Board Tasks",
     description: "Projeto BoardTasks",
+    tools: ["nodejs", "express", "swagger", "jsonwebtoken", "bcrypt", "dotenv", "mongoose", "mongodb"],
     github: "https://github.com/Gguife/BoardTasks-back",
     web: "",
     category: "Back-end"
@@ -79,6 +86,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "RESTful API",
     description: "Java RESTful API Back-end Santander",
+    tools: ["java", "spring-boot", "spring-data-jpa"],
     github: "https://github.com/Gguife/RESTful-API-Dio",
     web: "",
     category: "Back-end"
@@ -88,6 +96,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Naped,
     title: "Naped",
     description: "Sua plataforma de entretenimento",
+    tools: ["react", "typescript", "CSS", "react-router-dom"],
     github: "https://github.com/Gguife/Naped",
     web: "https://naped-nine.vercel.app/",
     category: "Front-end"
@@ -97,6 +106,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "Finance API",
     description: "Tudo em um só lugar",
+    tools: ["nodejs", "express", "dotenv", "mysql", "knex", "jsonwebtoken", "express-bearer-token"],
     github: "https://github.com/Gguife/finance-fullstack-api",
     web: "",
     category: "Back-end"
@@ -106,6 +116,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Rachi,
     title: "Rachi",
     description: "Tudo em um só lugar",
+    tools: ["HTML", "CSS", "javascript"],
     github: "https://github.com/Gguife/Rachi",
     web: "https://gguife.github.io/Rachi/",
     category: "Front-end"
@@ -115,6 +126,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "Produto digital",
     description: "Escola DNC",
+    tools: ["nodejs", "express", "docker", "mysql", "knex"],
     github: "https://github.com/Gguife/Ednc",
     web: "",
     category: "Back-end"
@@ -124,6 +136,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     imgPath: Backend,
     title: "API para Conversão monetária",
     description: "Escola DNC",
+    tools: ["nodejs", "express", "axios", "dotenv", "jest", "sequelize", "mysql"],
     github: "https://github.com/Gguife/Challenge-bravo",
     web: "",
     category: "Back-end"

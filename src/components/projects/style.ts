@@ -56,6 +56,11 @@ gap: 3rem;
   background-color: #999;
   padding: 1rem;
   border-radius: 10px;
+  max-height: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
   img{
     width: 100%;
@@ -65,6 +70,38 @@ gap: 3rem;
   
   h3{
     color: #000;
+  }
+
+  .desc{
+    color: #555;
+    font-size: .7rem;
+    font-weight: 700;
+  }
+
+  .tools{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    gap: .2rem;
+
+    .tool-axios,.tool-react,.tool-react-router-dom,
+    .tool-react-icons,.tool-styled-components,
+    .tool-typescript, .tool-swiper, .tool-framer-motion,
+    .tool-html, .tool-css, .tool-typescript,
+    .tool-formspree, .tool-phosphor-icons, .tool-javascript,
+    .tool-nodejs, .tool-express, .tool-mongoose, .tool-dotenv,
+    .tool-jsonwebtoken, .tool-swagger, .tool-java,
+    .tool-spring-boot, .tool-spring-data-jpa, .tool-knex,
+    .tool-mysql, .tool-sequelize, .tool-jest, .tool-mongodb,
+    .tool-bcrypt, .tool-express-bearer-token,.tool-docker{
+      background-color: #053B60;
+      padding: .1rem .8rem;
+      border-radius: 6px;
+      font-size: .6rem;
+      color: #BBB;
+      font-weight: 400;
+    }
   }
 
   a{
