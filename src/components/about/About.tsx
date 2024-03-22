@@ -7,36 +7,13 @@ import { item } from "../../lib/Variants";
 import { FaFileAlt } from "react-icons/fa";
 import CV from "../../assets/cv.pdf";
 
+//icons
+import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaDocker, FaLinux, FaPython } from 'react-icons/fa';
+import { SiMysql, SiMongodb, SiPostgresql} from 'react-icons/si';
+import { TbBrandTypescript } from 'react-icons/tb';
+import { IoLogoJavascript } from "react-icons/io";
+
 const TAB_DATA = [
-  {
-  title: "Habilidade",
-  id: "Habilidade",
-  content: (
-    <ul>
-      <li>HTML / CSS</li>
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>NodeJS</li>
-      <li>SQL (MySQL / PostgreSQL)</li>
-      <li>NoSQL (MongoDB)</li>
-      <li>Git</li>
-      <li>Docker</li>
-      <li>Linux</li>
-      <li>Python</li>
-    </ul>
-  ),
-  },
-  {
-    title: "Acadêmico",
-    id: "Academico",
-    content: (
-    <ul>
-      <li>Engenharia de Software (EAD) - Estácio</li>
-      <li>Formação em Tecnologia - Escola DNC</li>
-    </ul>
-    ),
-  },
   {
     title: "Certificado",
     id: "Certificado",
@@ -52,12 +29,21 @@ const TAB_DATA = [
         <li>Programação Orientada a Objetos com JAVA - Dio</li>
       </ul>
     ),
+  },{
+    title: "Acadêmico",
+    id: "Academico",
+    content: (
+    <ul>
+      <li>Engenharia de Software (EAD) - Estácio</li>
+      <li>Formação em Tecnologia - Escola DNC</li>
+    </ul>
+    ),
   },
 ];
 
 
 export const About = () => {
-const [activeTab, setActiveTab] = useState("Habilidade");
+const [activeTab, setActiveTab] = useState("Certificado");
 
 const handleTabClick = (title: string) => {
     setActiveTab(title);
@@ -81,15 +67,34 @@ const handleTabClick = (title: string) => {
                     </p>
                 </div>
                 <div className="desc-estudos">
-                  {TAB_DATA.map((tab) =>(
-                      <div key={tab.title}>
-                          <TabButton onClick={() => handleTabClick(tab.title)} active={activeTab === tab.title}>
-                              {tab.title}
-                              <div className="border-bottom"></div>
-                          </TabButton>
-                          <TabContent active={activeTab === tab.title} className={tab.title}>{tab.content}</TabContent>
-                      </div>
-                  ))}
+                  <div className="skills">
+                    <ul>
+                      <li><FaHtml5 className="icons"/><p>HTML</p></li>
+                      <li><FaCss3Alt className="icons"/><p>CSS</p></li>
+                      <li><IoLogoJavascript className="icons"/><p>JS</p></li>
+                      <li><TbBrandTypescript className="icons"/><p>TS</p></li>
+                      <li><FaReact className="icons"/><p>React</p></li>
+                      <li><FaNodeJs className="icons"/><p>Nodejs</p></li>
+                      <li><SiMysql className="icons"/><p>Mysql</p></li>
+                      <li><SiPostgresql className="icons"/><p>Postgresql</p></li>
+                      <li><SiMongodb className="icons"/><p>Mongodb</p></li>
+                      <li><FaGitAlt className="icons"/><p>Git</p></li>
+                      <li><FaDocker className="icons"/><p>Docker</p></li>
+                      <li><FaLinux  className="icons"/><p>Linux</p></li>
+                      <li><FaPython className="icons"/><p>Python</p></li>
+                    </ul>
+                  </div>
+                  <div className="buttons-about">
+                    {TAB_DATA.map((tab) =>(
+                        <div key={tab.title}>
+                            <TabButton onClick={() => handleTabClick(tab.title)} active={activeTab === tab.title}>
+                                {tab.title}
+                                <div className="border-bottom"></div>
+                            </TabButton>
+                            <TabContent active={activeTab === tab.title} className={tab.title}>{tab.content}</TabContent>
+                        </div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             </AboutContentDesc>

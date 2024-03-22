@@ -19,7 +19,7 @@ export const AboutContainer = styled.div`
 display: flex;
 justify-content: space-between;
 max-width: 1200px;
-height: 600px;
+height: 630px;
 margin: 0 auto;
 padding: 20px;
 gap: 3rem;
@@ -103,8 +103,38 @@ max-width: 550px;
   }
   
   .desc-estudos{
+    padding: 0 10px;
     display: flex;
     gap: 1rem;
+    position: relative;
+
+    .buttons-about{
+      display: flex;
+      gap: 1rem;
+    }
+
+    .skills{
+      max-width: 80px;
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .2rem;
+
+        li{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: .2rem;
+          font-size: .7rem;
+          border-radius: 5px;
+          padding: .2rem .3rem .2rem .4rem;
+          background-color: #053B60;
+        }
+      }
+    }
   }
   
   @media(max-width: 1000px){
@@ -116,6 +146,25 @@ max-width: 550px;
   }
 }
 
+@media(max-width: 900px){
+  .desc-estudos{
+    .buttons-about{
+      margin-left: 3.2rem;
+    }
+    .skills{
+      position: absolute;
+      ul{
+        li{
+          background-color: transparent;
+          p{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media(max-width: 500px){
   h1{
     font-size: 1.3rem;
@@ -123,7 +172,6 @@ max-width: 550px;
   p{
     font-size: .6rem;
   }
- 
 }
 `;
 
@@ -135,7 +183,7 @@ export const TabContent = styled.ul<TabContentProps>`
 padding: 10px;
 display: ${(props) => (props.active ? "block" : "none")};
 position: absolute;
-left: 1rem;
+left: 6.4rem;
   ul{
     list-style: none;
     z-index: 999;
@@ -144,8 +192,9 @@ left: 1rem;
       font-size: .85rem;
     }
   }
-
-
+@media(max-width: 900px){
+  left: 3.5rem;
+}
 @media(max-width: 500px){
   ul{
     li{
@@ -172,6 +221,9 @@ padding: 5px 5px;
 background-color: transparent;
 color: #999;
 cursor: pointer;
+
+
+
 
 ${(props) =>
     props.active &&
