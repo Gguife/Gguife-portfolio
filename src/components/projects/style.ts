@@ -55,7 +55,7 @@ gap: 3rem;
   width: 100%;
   background-color: #999;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 15px 0 15px 0;
   max-height: 500px;
   height: 100%;
   display: flex;
