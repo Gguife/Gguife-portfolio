@@ -5,6 +5,7 @@ import Plan from "../assets/plan.png";
 import Backend from "../assets/backend.png";
 import MecanicaMundial from "../assets/mecanica-mundial.png";
 import CodeNFT from "../assets/tela.png";
+import Clima from "../assets/clima.png";
 
 
 
@@ -68,7 +69,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "API de livros DNC",
     tools: ["nodejs", "express", "mongoose", "dotenv", "mongodb"],
     github: "https://github.com/Gguife/livrosDNC-Backend",
-    web: "",
+    web: "https://github.com/Gguife/livrosDNC-Backend",
     category: "Back-end"
   },
   {
@@ -78,7 +79,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Projeto BoardTasks",
     tools: ["nodejs", "express", "swagger", "jsonwebtoken", "bcrypt", "dotenv", "mongoose", "mongodb"],
     github: "https://github.com/Gguife/BoardTasks-back",
-    web: "",
+    web: "https://github.com/Gguife/BoardTasks-back",
     category: "Back-end"
   },
   {
@@ -88,7 +89,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Java RESTful API Back-end Santander",
     tools: ["java", "spring-boot", "spring-data-jpa"],
     github: "https://github.com/Gguife/RESTful-API-Dio",
-    web: "",
+    web: "https://github.com/Gguife/RESTful-API-Dio",
     category: "Back-end"
   },
   {
@@ -108,7 +109,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Tudo em um só lugar",
     tools: ["nodejs", "express", "dotenv", "mysql", "knex", "jsonwebtoken", "express-bearer-token"],
     github: "https://github.com/Gguife/finance-fullstack-api",
-    web: "",
+    web: "https://github.com/Gguife/finance-fullstack-api",
     category: "Back-end"
   }, 
   {
@@ -128,7 +129,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Escola DNC",
     tools: ["nodejs", "express", "docker", "mysql", "knex"],
     github: "https://github.com/Gguife/Ednc",
-    web: "",
+    web: "https://github.com/Gguife/Ednc",
     category: "Back-end"
   },
   {
@@ -138,7 +139,17 @@ export const PROJECTS_MOCK: ProjectType[] = [
     description: "Escola DNC",
     tools: ["nodejs", "express", "axios", "dotenv", "jest", "sequelize", "mysql"],
     github: "https://github.com/Gguife/Challenge-bravo",
-    web: "",
+    web: "https://github.com/Gguife/Challenge-bravo",
     category: "Back-end"
+  },
+  {
+    id: 13,
+    imgPath: Clima,
+    title: "Gguife clima",
+    description: "Veja como está o tempo da sua cidade",
+    tools: ["HTML", "CSS", "javascript"],
+    github: "https://github.com/Gguife/Clima-JS",
+    web: "https://gguife.github.io/Clima-JS/",
+    category: "Front-end"
   },
 ]
