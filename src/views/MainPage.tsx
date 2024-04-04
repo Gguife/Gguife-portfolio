@@ -15,6 +15,7 @@ import { Projects } from "../components/projects/Projects";
 import { Langs } from "../components/lang/Langs";
 import { Contact } from "../components/contact/Contact";
 import { ScrollUp } from "../components/scrollUp/ScrollUp";
+import { Social } from "../components/social";
 
 
 export const MainPage = () => {
@@ -46,6 +47,7 @@ export const MainPage = () => {
         <Langs />
         <Contact />
         <ScrollUp />
+        <Social />
       </ThemeProvider>
     </>
   )
