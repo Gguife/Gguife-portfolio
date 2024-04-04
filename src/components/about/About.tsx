@@ -16,18 +16,18 @@ const TAB_DATA = [
       <ul>
       <li><FaHtml5 className="icons"/><p>HTML</p></li>
       <li><FaCss3Alt className="icons"/><p>CSS</p></li>
+      <li><FaGitAlt className="icons"/><p>Git</p></li>
+      <li><FaLinux  className="icons"/><p>Linux</p></li>
+      <li><SiMysql className="icons"/><p>Mysql</p></li>
+      <li><FaNodeJs className="icons"/><p>Nodejs</p></li>
+      <li><FaReact className="icons"/><p>React</p></li>
+      <li><FaDocker className="icons"/><p>Docker</p></li>
+      <li><FaPython className="icons"/><p>Python</p></li>
+      <li><FaWindows  className="icons"/><p>Windows</p></li>
+      <li><SiMongodb className="icons"/><p>Mongodb</p></li>
       <li><IoLogoJavascript className="icons"/><p>Javascript</p></li>
       <li><TbBrandTypescript className="icons"/><p>Typescript</p></li>
-      <li><FaReact className="icons"/><p>React</p></li>
-      <li><FaNodeJs className="icons"/><p>Nodejs</p></li>
-      <li><SiMysql className="icons"/><p>Mysql</p></li>
       <li><SiPostgresql className="icons"/><p>Postgresql</p></li>
-      <li><SiMongodb className="icons"/><p>Mongodb</p></li>
-      <li><FaGitAlt className="icons"/><p>Git</p></li>
-      <li><FaDocker className="icons"/><p>Docker</p></li>
-      <li><FaLinux  className="icons"/><p>Linux</p></li>
-      <li><FaWindows  className="icons"/><p>Windows</p></li>
-      <li><FaPython className="icons"/><p>Python</p></li>
     </ul>
     ),
   }

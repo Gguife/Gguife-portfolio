@@ -15,6 +15,7 @@ justify-content: center;
 padding: 60px 20px;
 
 @media(max-width: 900px){
+
 }
 `;
 
@@ -26,7 +27,7 @@ max-width: 800px;
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     gap: 1rem;
     padding: 0 0 1rem 1rem;
     .hr-title{
@@ -56,8 +57,7 @@ max-width: 800px;
     margin-bottom: 1rem; 
 
     .tec-title{
-      margin-bottom: 1rem; 
-      text-align: center;
+      margin-bottom: 1rem;
     }
 
     .tecnologias{
@@ -87,40 +87,50 @@ max-width: 800px;
     }
   }
   
-  @media(max-width: 1000px){
-    padding-top: 0rem;    
-    .desc-sobremim{
-    p{
+@media(max-width: 700px){
+  .desc-estudos{
+    padding: 10px;
+    .tec-title{
       font-size: .8rem;
+      
     }
-  }
+    
+    .tecnologias{
+      ul{
+        grid-template-columns: repeat(4,1fr);
+      }
+    }
+  }  
 }
 
-@media(max-width: 900px){
-  .desc-estudos{
-    .buttons-about{
-      margin-left: 3.2rem;
+@media(max-width: 550px){
+  .desc-sobremim{
+    p{
+      font-size: .7rem;
     }
-    .skills{
-      position: absolute;
+  }
+
+  .desc-estudos{
+    padding: 10px;
+    .tec-title{
+      font-size: .7rem;
+      text-align: center;
+    }
+    
+    .tecnologias{
       ul{
+        grid-template-columns: repeat(3,1fr);
         li{
-          background-color: transparent;
           p{
-            display: none;
+            font-size: .6rem;
+          }
+          .icons{
+            font-size: .9rem;
           }
         }
       }
     }
-  }
+  }  
 }
 
-@media(max-width: 500px){
-  h1{
-    font-size: 1.3rem;
-  }
-  p{
-    font-size: .6rem;
-  }
-}
 `;

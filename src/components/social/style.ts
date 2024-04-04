@@ -19,4 +19,9 @@ export const SocialMedia = styled.div`
     width: 1px;
     background-color: #FFF;
   }
+
+@media(max-width: 1000px){
+  display: none;
+}
+  
 `;
