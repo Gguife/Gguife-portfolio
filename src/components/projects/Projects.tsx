@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
-import { ProjectSection, ProjectButton, ProjectCard } from "./style";
-
+import { ProjectSection, ProjectButton, ProjectCard, ProjectCardDesc } from "./style";
 import { PROJECTS_MOCK } from "../../mock/projectCard";
-
-import { TbWorldCode, TbCode } from "react-icons/tb";
-
-import Motion from "../Motion";
+import { TbWorldCode } from "react-icons/tb";
+import { RiCloseCircleFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { item } from "../../lib/Variants";
+import { IoEyeSharp } from "react-icons/io5";
 
 type Project = {
   id: number;
@@ -16,18 +14,27 @@ type Project = {
   title: string;
   description: string;
   tools: string[];
-  github: string;
+  desc: string;
   web: string;
 };
 
 export const Projects = () => {
   const [activeTab, setActiveTab] = useState("Front-end");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [motionKey, setMotionKey] = useState(0);
 
   const handleTabClick = (category: string) => {
     setActiveTab(category);
     setMotionKey((prevKey) => prevKey + 1);
+  };
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  const handleClose = () => {
+    setSelectedProject(null);
   };
 
   useEffect(() => {
@@ -36,47 +43,56 @@ export const Projects = () => {
   }, [activeTab]);
 
   return (
-    <Motion className="section-projetos" id="projetos" key={motionKey}>
-      <ProjectSection id="projetos">
-        <h1>Meus Projetos</h1>
-        <ProjectButton>
-          <button onClick={() => handleTabClick("Front-end")} className={activeTab === "Front-end" ? "active-button" : ""}>
-            Front-end
-          </button>
-          <button onClick={() => handleTabClick("Back-end")} className={activeTab === "Back-end" ? "active-button" : ""}>
-            Back-end
-          </button>
-        </ProjectButton>
-        <ProjectCard>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project) => (
-              <motion.div key={project.id}  variants={item} className="project-card">
-                <img src={project.imgPath} alt="Imagem do Projeto" />
-                <div className="project-info">
+    <ProjectSection>
+      <h1>Projetos</h1>
+      <ProjectButton>
+        <button onClick={() => handleTabClick("Front-end")} className={activeTab === "Front-end" ? "active-button" : ""}>
+          Front-end
+        </button>
+        <button onClick={() => handleTabClick("Back-end")} className={activeTab === "Back-end" ? "active-button" : ""}>
+          Back-end
+        </button>
+        <button onClick={() => handleTabClick("Software")} className={activeTab === "Software" ? "active-button" : ""}>
+          Sistemas
+        </button>
+      </ProjectButton>
+      <ProjectCard>
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project) => (
+            <motion.div key={project.id} variants={item} className="project-card" onClick={() => handleProjectClick(project)}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}>
+              <img src={project.imgPath} alt="Imagem do Projeto" />
+              <div className="project-info">
                 <h3>{project.title}</h3>
                 <p className="desc">{project.description}</p>
-                
-                </div>
-                <p className="tools">
-                  {project.tools.map((tool) => (
-                    <span key={tool} className={`tool-${tool.toLowerCase().replace(/\s+/g, '-')}`}>{tool}</span>
-                  ))}
-                </p>
-                <div className="links">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <TbCode />
-                  </a>
-                  <a href={project.web} target="_blank" rel="noopener noreferrer">
-                    <TbWorldCode />
-                  </a>
-                </div>
-              </motion.div>
-            ))
-          ) : (
-            <p>Nenhum projeto encontrado para esta categoria.</p>
-          )}
-        </ProjectCard>
-      </ProjectSection>
-    </Motion>
+              </div>
+              <p className="tools">
+                {project.tools.map((tool) => (
+                  <span key={tool} className={`tool-${tool.toLowerCase().replace(/\s+/g, '-')}`}>{tool}</span>
+                ))}
+              </p>
+              <IoEyeSharp className="eye-icon" />
+            </motion.div>
+          ))
+        ) : (
+          <p>Nenhum projeto encontrado para esta categoria.</p>
+        )}
+      </ProjectCard>
+      <ProjectCardDesc show={selectedProject !== null}>
+        {selectedProject && (
+          <motion.div className="mobile-project-details">
+            <div className="details-container">
+              <span onClick={handleClose}><RiCloseCircleFill className="closeIcon"/></span>
+              <img src={selectedProject.imgPath} alt="Imagem do Projeto" />
+              <h3>{selectedProject.title}</h3>
+              <p className="project-container-desc">{selectedProject.desc}</p>
+              <a href={selectedProject.web} target="_blank">
+                Veja o projeto<TbWorldCode className="link-icon" />
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </ProjectCardDesc>
+    </ProjectSection>
   );
 };
