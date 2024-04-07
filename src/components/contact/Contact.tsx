@@ -65,8 +65,8 @@ export const Contact = () =>{
       <Motion className="contato-section" id="contato">
         <ContactContainer>
           <ContactLeftSide>
-            <h2>Vamos nos Conectar</h2>
-            <p>Atualmente, estou em busca de novas oportunidades e minha caixa de entrada está sempre aberta. Se você tiver alguma pergunta ou simplesmente quiser dizer oi, sinta-se a vontade!</p>
+            <h2>Fale comigo</h2>
+            <p>Quer dar vida aos seus projetos? Vamos conversar! Estou aqui para colocar em prática todas as suas ideias, sinta-se a vontade para entrar em contato comigo!</p>
             <a href="https://github.com/Gguife" target='__blank'><FiGithub /></a>
             <a href="https://www.linkedin.com/in/gguife/" target='__blank'><FiLinkedin /></a>
           </ContactLeftSide>
