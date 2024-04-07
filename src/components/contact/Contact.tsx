@@ -6,30 +6,13 @@ import {FiGithub, FiLinkedin} from 'react-icons/fi';
 import { AiOutlineSend } from 'react-icons/ai';
 import { BiSolidError } from 'react-icons/bi';
 import Motion from "../Motion";
+//doten
+require('dotenv').config();
 
 export const Contact = () =>{
   const form = useRef<HTMLFormElement>(null);
+
   
-
-  const sendEmail = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      if (form.current) {
-        await emailjs.sendForm(
-          'service_ymhe1jk',
-          'template_pbthub7',
-          form.current,
-          'OvbrKX0pZ57OzMih6'
-        );
-        form.current.reset();
-        console.log('E-mail enviado com sucesso!');
-      }
-    } catch (error) {
-      console.error('Erro ao enviar o e-mail:', error);
-    }
-  };
-
   const handleSendClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
   
@@ -39,12 +22,12 @@ export const Contact = () =>{
     const obs = document.querySelector('#textarea') as HTMLTextAreaElement;
   
     const formElement = form.current as HTMLFormElement | null;
-  
+    
     if (email.value !== '' && obs.value !== '' && formElement) {
       msgSend.style.display = 'flex';
-  
-      emailjs.sendForm('service_ymhe1jk', 'template_pbthub7', formElement, 'OvbrKX0pZ57OzMih6');
-  
+      
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID || '', process.env.REACT_APP_TEMPLATE_ID || '', formElement, process.env.REACT_APP_USER_ID || '');
+      
       email.value = '';
       obs.value = '';
   
@@ -53,13 +36,31 @@ export const Contact = () =>{
       }, 3000);
     } else {
       msgErro.style.display = 'flex';
-  
+      
       setTimeout(() => {
         msgErro.style.display = 'none';
       }, 3000);
     }
   };
   
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      if (form.current) {
+        await emailjs.sendForm(
+          process.env.REACT_APP_SERVICE_ID || '',
+          process.env.REACT_APP_TEMPLATE_ID || '',
+          form.current,
+          process.env.REACT_APP_USER_ID || ''
+        );
+        form.current.reset();
+        console.log('E-mail enviado com sucesso!');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar o e-mail:', error);
+    }
+  };
   return (
     <ContactSection id="contato">
       <Motion className="contato-section" id="contato">
@@ -76,7 +77,7 @@ export const Contact = () =>{
               <input type="email"
               name='email'
               className='contact-form-input'
-              placeholder='gguife747@gmail.com'
+              placeholder='gguifedev@gmail.com'
               id='email'
               required
               />
