@@ -46,11 +46,11 @@ button{
 `;
 
 export const ProjectCard = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  place-items: start;
-  padding: 10px;
-  gap: 3rem;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+place-items: start;
+padding: 10px;
+gap: 3rem;
 
   .project-card {
     position: relative;
@@ -128,6 +128,19 @@ export const ProjectCard = styled.div`
 @media(max-width: 900px){
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+
+  .eye-icon{
+    display: none;
+  }
+
+  .project-card {
+   
+    &:hover {
+      img, h3, .desc, .tools {
+        display: flex;
+      }
+    }
+  }
 }
 
 @media(max-width: 500px){
@@ -158,60 +171,84 @@ export const ProjectCardDesc = styled.div<{ show: boolean }>`
 display: block;
 background-color: ${({theme}) => theme.body};
 position: fixed;
-top: .5rem;
 right: ${props => props.show ? "0" : "-60rem"};
-bottom: .5rem;
-width: 45%;
+top: 0;
+bottom: 0;
+width: 50%;
 border-radius: 10px 0 0 10px;
 transition: all ease .5s;
 z-index: 99999;
 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+display: flex;
+
+.closeIcon{
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer; 
+  z-index: 99999;   
+}
 
 .details-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  flex-direction:column;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem;
+  height: 100%;
+  
 
-  .closeIcon{
-    position: absolute;
-    left: .5rem;
-    top: 1.5rem;
-    font-size: 2rem;
-    cursor: pointer;    
+  .top-contianer{
+    img{
+      width: 100%;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+      
+    h3{
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      .subtitle{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #555;
+      }
+    }
+      
   }
-
-  img{
-    width: 100%;
-    margin: 3rem 0 2rem 0;
-    border-radius: 10px;
+  
+  .project-container-tools{
+    .tools-title{
+      color: #FF7F50;
+      font-weight: 700;
+    }
+    .project-container-tools{
+      font-size: .8rem;
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      .tool{
+        color: #555;
+      }
+    }
   }
-    
-  h3{
-    font-size: 2rem;
-  }
-    
-  .project-container-desc{
-    margin: 2rem 0 4rem 0;
-  }
-
 
   a{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #222;
-    background-color: #FFF;
+    font-size: 1.1rem;
+    color: #FFF;
+    background-color: #053B60;
     padding: .5rem 1.2rem;
     border-radius: 10px 0 10px 0;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    text-decoration: none;
     transition: .3s;
-
+    
     &:hover{
-      background-color: #053B60;
+      background-color: ${({theme}) => theme.body};
       color: #FFF;
     }
 
@@ -220,6 +257,58 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       margin-left: 10px;
     }
   }
+}
 
+
+@media(max-width: 1100px){
+  .closeIcon{
+    left: 1rem;
+  }
+
+  .details-container{
+    padding: 1.5rem;
+  
+  
+    img{
+      margin: 5rem 0 1rem 0;
+    }
+      
+    .project-container-desc{
+      margin: 1rem 0 4rem 0;
+      font-size: .9rem;
+    }
+  }
+}
+
+@media(max-width: 900px){
+  width: 100%;
+}
+
+@media(max-width: 400px){
+  .details-container{
+    padding: 1.5rem;
+
+    .subtitle{
+      font-size: .7rem;
+      margin-bottom: 1rem;
+    }
+  
+    .project-container-tools{
+      display: none;
+    }
+  
+    img{
+      margin: 3rem 0 1rem 0;
+    }
+      
+    .project-container-desc{
+      margin: 0rem 0 2rem 0;
+      font-size: .7rem;
+    }
+
+    a{
+      font-size: .8rem;
+    }
+  }
 }
 `;
