@@ -37,7 +37,7 @@ button{
 
 
 @media(max-width: 500px){
-  gap: 2rem;
+  gap: .5rem;
   
   button{
     padding: .8rem 1rem; 
