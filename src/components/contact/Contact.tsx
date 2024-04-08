@@ -17,10 +17,10 @@ export const Contact = () =>{
     try {
       if (form.current) {
         await emailjs.sendForm(
-          'service_ymhe1jk',
-          'template_pbthub7',
+          'service_ih7gzgz',
+          'template_l7f93gf',
           form.current,
-          'OvbrKX0pZ57OzMih6'
+          '8vz3Si-zbTt4i5w7Y'
         );
         form.current.reset();
         console.log('E-mail enviado com sucesso!');
@@ -43,7 +43,7 @@ export const Contact = () =>{
     if (email.value !== '' && obs.value !== '' && formElement) {
       msgSend.style.display = 'flex';
   
-      emailjs.sendForm('service_ymhe1jk', 'template_pbthub7', formElement, 'OvbrKX0pZ57OzMih6');
+      emailjs.sendForm('service_ih7gzgz', 'template_l7f93gf', formElement, '8vz3Si-zbTt4i5w7Y');
   
       email.value = '';
       obs.value = '';
@@ -65,8 +65,8 @@ export const Contact = () =>{
       <Motion className="contato-section" id="contato">
         <ContactContainer>
           <ContactLeftSide>
-            <h2>Vamos nos Conectar</h2>
-            <p>Atualmente, estou em busca de novas oportunidades e minha caixa de entrada está sempre aberta. Se você tiver alguma pergunta ou simplesmente quiser dizer oi, sinta-se a vontade!</p>
+            <h2>Fale comigo</h2>
+            <p>Quer dar vida aos seus projetos? Vamos conversar! Estou aqui para colocar em prática todas as suas ideias, sinta-se a vontade para entrar em contato comigo!</p>
             <a href="https://github.com/Gguife" target='__blank'><FiGithub /></a>
             <a href="https://www.linkedin.com/in/gguife/" target='__blank'><FiLinkedin /></a>
           </ContactLeftSide>
@@ -76,7 +76,7 @@ export const Contact = () =>{
               <input type="email"
               name='email'
               className='contact-form-input'
-              placeholder='gguife747@gmail.com'
+              placeholder='gguifedev@gmail.com'
               id='email'
               required
               />
