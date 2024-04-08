@@ -87,8 +87,8 @@ export const Projects = () => {
                   <img src={selectedProject.imgPath} alt="Imagem do Projeto" />
                   <h3>{selectedProject.title}<br/><span className="subtitle">{selectedProject.subtitle}</span></h3>
                 </div>
-                <p className="project-container-desc">{selectedProject.desc}</p>
-                <div className="project-container-tools">
+                <div className="project-container-main">
+                  <p className="project-container-desc">{selectedProject.desc}</p>
                   <span className="tools-title">🛠 Tecnologias</span>
                   <p className="project-container-tools">
                   {selectedProject.tools.map((tool) => (
