@@ -171,7 +171,7 @@ export const ProjectCardDesc = styled.div<{ show: boolean }>`
 display: block;
 background-color: ${({theme}) => theme.body};
 position: fixed;
-right: ${props => props.show ? "0" : "-60rem"};
+right: ${props => props.show ? "0" : "-100rem"};
 top: 0;
 bottom: 0;
 width: 50%;
@@ -196,7 +196,7 @@ align-items: center;
   flex-direction:column;
   justify-content: space-between;
   padding: 1.5rem 1.5rem;
-  gap: 2.5rem;
+  gap: 1.3rem;
   
 
   .top-contianer{
@@ -212,7 +212,7 @@ align-items: center;
       display: flex;
       flex-direction: column;
       .subtitle{
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 400;
         color: #555;
       }
@@ -222,6 +222,7 @@ align-items: center;
   .project-container-main{
     .project-container-desc{
       margin-bottom: .5rem;
+      font-size: .9rem;
     }
     .tools-title{
       color: #FF7F50;
