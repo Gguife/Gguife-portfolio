@@ -58,8 +58,8 @@ export const PROJECTS_MOCK: ProjectType[] = [
     title: "System authentication",
     subtitle: "Sistema de autenticação de usuários",
     tools: ["nodejs","MySQL", "Sequelize", "docker-compose", "Redis","Jest"],
-    desc: "Tive como principal função a implementação de um código focado na segurança contra Brute Force e também visando criptografar os dados do usuário. ",
-    web: "https://github.com/Gguife/livrosDNC-Backend",
+    desc: "Tive como principal função a implementação de um código focado na segurança contra Brute Force e também visando criptografar os dados do usuário.",
+    web: "https://github.com/Gguife/system_auth",
     category: "Back-end"
   },
   {
