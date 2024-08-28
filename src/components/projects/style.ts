@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectSection = styled.section`
-max-width: 1200px;
+max-width: 1300px;
 margin: 0 auto;
 padding: 2rem 0;
 
@@ -64,11 +64,10 @@ gap: 3rem;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    transition: all ease .3s;
 
     &:hover {
       img, h3, .desc, .tools {
-        display: none;
+        opacity: .1;
       }
     }
 
@@ -98,7 +97,7 @@ gap: 3rem;
       .tool-react, .tool-html, .tool-css, .tool-typescript,
       .tool-javascript, .tool-nodejs, .tool-swagger, .tool-java,
       .tool-spring-boot, .tool-mysql, .tool-sequelize, .tool-jest,
-      .tool-mongodb, .tool-docker {
+      .tool-mongodb, .tool-docker, .tool-docker-compose, .tool-redis {
         background-color: ${({ theme }) => theme.body};
         padding: .3rem .8rem;
         border-radius: 6px;
@@ -113,10 +112,10 @@ gap: 3rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 4rem;
+      font-size: 5rem;
       color: #053B60;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.5s ease;
     }
 
     &:hover .eye-icon {
@@ -174,7 +173,7 @@ position: fixed;
 right: ${props => props.show ? "0" : "-100rem"};
 top: 0;
 bottom: 0;
-width: 50%;
+width: 100dvh;
 border-radius: 10px 0 0 10px;
 transition: all ease .5s;
 z-index: 99999;
@@ -183,20 +182,18 @@ display: flex;
 align-items: center;
 
 .closeIcon{
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
   font-size: 2rem;
+  margin-left: 2rem;
   cursor: pointer; 
-  z-index: 99999;   
+  z-index: 99999;
 }
 
 .details-container{
   display: flex;
   flex-direction:column;
   justify-content: space-between;
-  padding: 1.5rem 1.5rem;
-  gap: 1.3rem;
+  padding: 0 1.5rem;
+  gap: 2rem;
   
 
   .top-contianer{
@@ -207,7 +204,6 @@ align-items: center;
     }
       
     h3{
-      padding-top: 1rem;
       font-size: 1.3rem;
       display: flex;
       flex-direction: column;
@@ -291,11 +287,11 @@ align-items: center;
 
 @media(max-width: 500px){
   .details-container{
-    gap: 2rem;
+    gap: 1rem;
 
     .top-contianer{ 
       img{
-        margin: 2.5rem 0 0rem 0;
+        margin: 0rem 0 0rem 0;
       }
       h3{
         padding-top: .5rem;

@@ -2,6 +2,7 @@ import Kenai from "../assets/kenai.png";
 import Rachi from "../assets/Rachi.png";
 import Naped from "../assets/naped.png";
 import Backend from "../assets/backend.png";
+import SystemAuth from "../assets/systemAuth.png";
 import MecanicaMundial from "../assets/mecanica-mundial.png";
 import CodeNFT from "../assets/tela.png";
 import Clima from "../assets/clima.png";
@@ -53,10 +54,10 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 4,
-    imgPath: Backend,
-    title: "API livros",
-    subtitle: "API de livros DNC",
-    tools: ["nodejs","mongodb"],
+    imgPath: SystemAuth,
+    title: "System authentication",
+    subtitle: "Sistema de autenticação de usuários",
+    tools: ["nodejs","MySQL", "Sequelize", "docker-compose", "Redis","Jest"],
     desc: "Um sistema de gerencimaneto de livros, desenvolvido em Node.js com Express, oferece um CRUD para inserir, visualizar, atualizar e remover os livros. Utilizando banco de dados não relacionais MongoDB para armazenar os dados inseridos. Com oesse sistema os usuários tem a liberdade de utilizá-lo conforme suas nessecidades, seja para catalogar os livros já lidos ou para manter uma lista dos livros desejados para leitura futura. ",
     web: "https://github.com/Gguife/livrosDNC-Backend",
     category: "Back-end"

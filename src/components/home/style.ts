@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePage = styled.section`
-height: calc(100vh - 8rem);
+height: calc(100dvh - 8rem);
 position: relative;
 display: flex;
 flex-direction: column;

@@ -3,8 +3,8 @@ import Motion from "../Motion";
 import { motion } from "framer-motion";
 import { item } from "../../lib/Variants";
 //icons
-import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaDocker, FaLinux, FaPython, FaWindows  } from 'react-icons/fa';
-import { SiMysql, SiMongodb, SiPostgresql} from 'react-icons/si';
+import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaDocker, FaLinux, FaJava, FaWindows  } from 'react-icons/fa';
+import { SiMysql, SiMongodb, SiPostgresql, SiSpringboot} from 'react-icons/si';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { IoLogoJavascript } from "react-icons/io";
 
@@ -22,7 +22,8 @@ const TAB_DATA = [
       <li><FaNodeJs className="icons"/><p>Nodejs</p></li>
       <li><FaReact className="icons"/><p>React</p></li>
       <li><FaDocker className="icons"/><p>Docker</p></li>
-      <li><FaPython className="icons"/><p>Python</p></li>
+      <li><FaJava className="icons"/><p>Java</p></li>
+      <li><SiSpringboot className="icons"/><p>SpringBoot</p></li>
       <li><FaWindows  className="icons"/><p>Windows</p></li>
       <li><SiMongodb className="icons"/><p>Mongodb</p></li>
       <li><IoLogoJavascript className="icons"/><p>Javascript</p></li>
