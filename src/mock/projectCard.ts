@@ -58,7 +58,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     title: "System authentication",
     subtitle: "Sistema de autenticação de usuários",
     tools: ["nodejs","MySQL", "Sequelize", "docker-compose", "Redis","Jest"],
-    desc: "Um sistema de gerencimaneto de livros, desenvolvido em Node.js com Express, oferece um CRUD para inserir, visualizar, atualizar e remover os livros. Utilizando banco de dados não relacionais MongoDB para armazenar os dados inseridos. Com oesse sistema os usuários tem a liberdade de utilizá-lo conforme suas nessecidades, seja para catalogar os livros já lidos ou para manter uma lista dos livros desejados para leitura futura. ",
+    desc: "Tive como principal função a implementação de um código focado na segurança contra Brute Force e também visando criptografar os dados do usuário. ",
     web: "https://github.com/Gguife/livrosDNC-Backend",
     category: "Back-end"
   },
