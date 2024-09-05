@@ -79,6 +79,7 @@ gap: 3rem;
 
     h3 {
       color: #000;
+      font-size: 1.1rem;
     }
 
     .desc {
@@ -97,7 +98,7 @@ gap: 3rem;
       .tool-react, .tool-html, .tool-css, .tool-typescript,
       .tool-javascript, .tool-nodejs, .tool-swagger, .tool-java,
       .tool-spring-boot, .tool-mysql, .tool-sequelize, .tool-jest,
-      .tool-mongodb, .tool-docker, .tool-docker-compose, .tool-redis {
+      .tool-mongodb, .tool-docker, .tool-docker-compose, .tool-redis, .tool-postgresql {
         background-color: ${({ theme }) => theme.body};
         padding: .3rem .8rem;
         border-radius: 6px;
@@ -151,17 +152,12 @@ gap: 3rem;
   .project-card{
     width: 80%;
     h3{
-      font-size: 1.2rem;
+      font-size: .9rem;
     }
     p{
-      font-size: .9rem;
-      margin: .2rem 0;
+      font-size: .7rem;
+      margin: .1rem 0;
     }
-    a{
-      font-size: 1.2rem;
-      padding-right: .5rem;      
-    }
-  
   }
 }
 `;
@@ -304,11 +300,12 @@ align-items: center;
     
     .project-container-main{
       margin-bottom: .2rem;
+      
       .project-container-desc{
         font-size: .7rem;
         margin-bottom: .2rem;
-      }
-      .tools-title{
+        }
+        .tools-title{
         color: #FF7F50;
         font-weight: 700;
         font-size: .9rem;

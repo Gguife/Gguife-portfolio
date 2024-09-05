@@ -115,11 +115,11 @@ export const PROJECTS_MOCK: ProjectType[] = [
   {
     id: 10,
     imgPath: Backend,
-    title: "Produto digital",
-    subtitle: "Escola DNC",
-    tools: ["nodejs", "docker", "mysql"],
-    desc: "Integrando e modelando dados de um produto digital, esta aplicação utiliza imagens MySQL em um container Docker para interagir de forma eficiente com o sistema em Node.js. Com foco na simulação de um e-commerce, o software armazena informações detalhadas dos usuários, bem como dos produtos e suas respectivas quantidades em estoque. Trata-se de um sistema seguro que prioriza a rapidez de execução.",
-    web: "https://github.com/Gguife/Ednc",
+    title: "Event register System",
+    subtitle: "EventiX",
+    tools: ["Java", "Spring Boot", "Postgresql", "Docker"],
+    desc: "O aplicativo gerencia eventos, permitindo cadastro, listagem, filtragem, visualização de detalhes do evento e associação de cupons de desconto.",
+    web: "https://github.com/Gguife/eventiX",
     category: "Back-end"
   },
   {
