@@ -12,7 +12,7 @@ justify-content: center;
 }
 
 @media (max-width: 550px) {
-  height: calc(100vh - 6rem);
+  height: calc(100dvh - 6rem);
 }
 `;
 
