@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const LangContainer = styled.div`
-background-color: #053B60;
+background-color: #f67f01;
 color: #FFF;
-margin: 4rem 0 0 0;
-padding: .5rem;
+padding: .2rem;
+opacity: .7;
 
 `;
 
@@ -16,8 +16,13 @@ align-items: center;
 width: 100%;
 margin: 0;
 
+p{
+  font-size: 1.2rem;
+}
 
 @media (max-width: 600px){
-  font-size: .5rem; 
+  p{
+    font-size: .5rem;
+  }
 }
 `;
