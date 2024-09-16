@@ -1,83 +1,86 @@
 import styled from 'styled-components';
 
 
-//Section
-export const AboutSection = styled.section`
-background-color: #333;
-color: #FFF;
-`;
+export const AboutSection = styled.div`
+background-color: #37383c;
+padding: 10rem 0 2rem 0;
 
-//Principal Content
-export const AboutContainer = styled.div`
-display: flex;
-aling-items: center;
-justify-content: center;
-padding: 60px 20px;
-
-@media(max-width: 900px){
+@media(max-width: 800px){
+  padding-top: 6rem;
 
 }
 `;
 
-
-export const AboutContentDesc = styled.div`
-max-width: 800px;
-  
+export const AboutContainer = styled.section`
+padding: 1rem 1rem;
   h1{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 1.5rem;
-    gap: 1rem;
-    padding: 0 0 1rem 1rem;
-    .hr-title{
-      background-color: #FFF;
-      height: 1px;
-      width: 40%;
+    font-size: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-weight: 400;
+
+    .loc-icon{
+      font-size: 2rem;
+      margin-right: .6rem;
     }
   }
-  
+`;
+
+
+export const AboutContentDesc = styled.div`
+display: block;  
   .desc-sobremim{
-    padding: 10px;
     p{
-      font-size: 1rem;
-      margin-bottom: .5rem;
+      font-size: 1.3rem;
+      line-height: 30px;
       span{
-        color: #4AAADA;
+        color: #f67f01;
         font-weight: 700;
       }
     }
   }
   
   .desc-estudos{
-    padding: 0 10px;
-    display: flex;
+    padding: 2rem;
     gap: 1rem;
-    position: relative;
-    margin-bottom: 1rem; 
-
-    .tec-title{
-      margin-bottom: 1rem;
-    }
-
     .tecnologias{
       ul{
-        list-style: none;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        justify-content: center;
-        place-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
         gap: 1rem;
+        list-style: none;
                 
         li{
-          width: 100%;
           display: flex;
           align-items: center;
           justify-content: start;
-          gap: 1rem;
+          gap: .5rem;
 
           p{
-            font-size: .7rem;
+            font-size: 1rem;
+          }
+          .icons{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+@media(max-width: 800px){
+  .desc-sobremim{
+    p{
+      font-size: 1rem;
+      line-height: 20px;
+    }
+  }
+  
+  .desc-estudos{
+    .tecnologias{
+      ul{       
+        li{
+          p{
+            font-size: 1rem;
           }
           .icons{
             font-size: 1rem;
@@ -86,51 +89,31 @@ max-width: 800px;
       }
     }
   }
-  
-@media(max-width: 700px){
-  .desc-estudos{
-    padding: 10px;
-    .tec-title{
-      font-size: .8rem;
-      
-    }
-    
-    .tecnologias{
-      ul{
-        grid-template-columns: repeat(4,1fr);
-      }
-    }
-  }  
 }
 
-@media(max-width: 550px){
+@media(max-width: 578px){
   .desc-sobremim{
     p{
-      font-size: .7rem;
+      font-size: .9rem;
+      line-height: 20px;
     }
   }
-
+  
   .desc-estudos{
-    padding: 10px;
-    .tec-title{
-      font-size: .7rem;
-      text-align: center;
-    }
-    
     .tecnologias{
-      ul{
-        grid-template-columns: repeat(3,1fr);
+      ul{  
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);     
         li{
           p{
-            font-size: .6rem;
+            font-size: .8em;
           }
           .icons{
-            font-size: .9rem;
+            font-size: .7rem;
           }
         }
       }
     }
-  }  
+  }
 }
-
 `;

@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-export const ProjectSection = styled.section`
-max-width: 1300px;
-margin: 0 auto;
-padding: 2rem 0;
-
-
+export const ProjectSection = styled.main`
+padding: 3rem;
 h1{
+  font-size: 3rem;
   text-align: center;
 }
 `;
@@ -20,10 +17,10 @@ gap: 3rem;
 
 button{
   padding: 1rem 1.5rem;
-  background-color: ${({theme}) => theme.body};
+  background-color: #FFF;
   border: 2px solid #053B60;
   border-radius: 5px;
-  color: ${({theme}) => theme.text};
+  color: #000;
   font-weight: 700;
   cursor: pointer;
   transition: .4s;
@@ -31,7 +28,7 @@ button{
 }
 
 .active-button{
-  background-color: #053B60;
+  background-color: #f67f01;
   color: #FFF;
 }
 
@@ -164,7 +161,7 @@ gap: 3rem;
 
 export const ProjectCardDesc = styled.div<{ show: boolean }>`
 display: block;
-background-color: ${({theme}) => theme.body};
+background-color: #25262a;
 position: fixed;
 right: ${props => props.show ? "0" : "-100rem"};
 top: 0;
@@ -237,15 +234,14 @@ align-items: center;
     justify-content: center;
     font-size: 1.1rem;
     color: #FFF;
-    background-color: #053B60;
+    background-color: #f67f01;
     padding: .5rem 1.2rem;
     border-radius: 10px 0 10px 0;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     text-decoration: none;
     transition: .3s;
     
     &:hover{
-      background-color: ${({theme}) => theme.body};
+      background-color: #37383c;
       color: #FFF;
     }
 

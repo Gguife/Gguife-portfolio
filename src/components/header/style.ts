@@ -2,80 +2,91 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
 height: 8rem;
-display: flex;
-align-items: center;
-justify-content: space-between;
+background-color: #37383c;
 padding: 0 2rem;
-max-width: 1200px;
-margin: 0 auto;
+border-bottom: .2rem solid #495057;
 
-@media(max-width: 500px){
+@media(max-width: 600px){
   height: 6rem;
 }
 `;
-
-export const HeaderMenu = styled.div`
-display: flex;
-align-items: end;
-gap: 1.5rem;
-
-span{
-  font-size: 2.5rem;
-  font-weight: 700;
-
-}
-
-ul{
-  display: flex;
-  margin-bottom: .5rem;
-  gap: 2.5rem;
-  list-style: none;
-
-  a{
-    text-decoration: none;
-    color: ${({theme}) => theme.text};
-  }
-}
-
-@media(max-width: 750px){
-  ul{
-    display: none;
-  }
-}
-@media(max-width: 500px){
-  span{
-    font-size: 2rem;
-  }
-}
-`;
-
-export const HeaderButton = styled.nav`
+  
+export const HeaderContent = styled.div`
+height: 8rem;
 display: flex;
 align-items: center;
-justify-content: center;
-gap: 2rem;
-
-
-  a{
+justify-content: space-between;
+max-width: 1400px;
+margin: 0 auto;
+  
+  .logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FaFaFa;
     text-decoration: none;
-    padding: .5rem 2rem;
-    background-color: #053B60;
-    border-radius: 10px;
-    color: #FFF;
-    transition: .3s;
+  }
+    
+  .header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    .sobre-link{
+      font-size: 1.5rem;
+      font-weight: 400;
+          color: #FaFaFa;
+    }
 
-    &:hover{
-      opacity: .8;
-      color: ${({theme}) => theme.body};
+    ul{
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+      
+      li{
+        padding: .5rem;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all ease .3s;
+
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          color: #FaFaFa;
+        }
+        
+        &:hover{
+          opacity: .5;
+        }
+      }
     }
   }
 
-@media(max-width: 500px){
-  gap: .5rem;
 
-  a{
-    padding: .5rem 1rem;
-    font-size: .8rem;
+@media(max-width: 600px){
+  height: 6rem;
+
+  .logo{
+    font-size: 2rem;
   }
+
+  .header-nav{
+
+    .sobre-link{
+      display: none;
+    }
+
+  ul{
+    
+    li{
+      a{
+        font-size: 1rem;
+      }
+    }
+  }
+}
 }
 `;
