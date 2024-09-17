@@ -118,7 +118,7 @@ h1{
 
 .articles-list{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   
   .article-card{
