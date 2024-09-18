@@ -61,6 +61,7 @@ gap: 3rem;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    gap: .5rem;
 
     &:hover {
       img, h3, .desc, .tools {
@@ -90,17 +91,17 @@ gap: 3rem;
       align-items: center;
       flex-wrap: wrap;
       margin: 5px 0;
-      gap: .6rem;
+      gap: .3rem;
 
       .tool-react, .tool-html, .tool-css, .tool-typescript,
       .tool-javascript, .tool-nodejs, .tool-swagger, .tool-java,
       .tool-spring-boot, .tool-mysql, .tool-sequelize, .tool-jest,
       .tool-mongodb, .tool-docker, .tool-docker-compose, .tool-redis, .tool-postgresql {
-        background-color: ${({ theme }) => theme.body};
+        background-color: #25262a;
         padding: .3rem .8rem;
-        border-radius: 6px;
+        border-radius: 4px;
         font-size: .6rem;
-        color: ${({ theme }) => theme.text};
+        color: #FFF;
         font-weight: 400;
       }
     }

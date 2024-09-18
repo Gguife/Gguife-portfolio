@@ -103,6 +103,10 @@ img{
 
     a{
       font-size: .8rem;
+      background-color: #25262a;
+      padding: .3rem .8rem;
+      text-decoration: none;
+      border-radius: 5px;
     }
   }
 }
@@ -186,9 +190,22 @@ h1{
   }
 }
 
-@media(max-width: 400px){
+@media(max-width: 500px){
   h1{
     font-size: 1.5rem;
+  }
+
+  .articles-list{
+    gap: 3rem;
+    .article-card{       
+      .article-content{
+        gap: .5rem;
+
+        h2{
+          margin-top: .7rem;
+        }
+      }
+    }
   }
 }
 `;
