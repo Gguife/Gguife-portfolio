@@ -19,7 +19,7 @@ const MainPage: React.FC = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get<Article[]>("https://dev.to/api/articles?username=gguife&per_page=6");
+        const response = await axios.get<Article[]>("https://dev.to/api/articles?username=gguife&per_page=6&sort_by=published_at");
         setArticles(response.data);
       } catch (error) {
         console.error("Erro ao buscar artigos", error);
