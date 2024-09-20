@@ -4,8 +4,8 @@ import Main from "../views/main/index.tsx";
 
 export const MainRouter = () =>{
   const router = useRoutes([
-    {path: "/", element: <Main />},
-    {path: "/sobre", element: <About />},
+    {path: "/article", element: <Main />},
+    {path: "/", element: <About />},
   ])
 
   return router;

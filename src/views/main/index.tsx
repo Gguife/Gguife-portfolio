@@ -41,7 +41,7 @@ const MainPage: React.FC = () => {
             tentando deixar a tecnologia mais simples e acessível, 
             enquanto navego pelo mundo digital.
           </p>
-          <Link to="/sobre">Mais sobre mim</Link>
+          <Link to="/">Mais sobre mim</Link>
         </div>
       </MainAboutMeCard>
 
