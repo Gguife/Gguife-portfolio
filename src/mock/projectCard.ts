@@ -6,6 +6,7 @@ import SystemAuth from "../assets/systemAuth.png";
 import MecanicaMundial from "../assets/mecanica-mundial.png";
 import CodeNFT from "../assets/tela.png";
 import Clima from "../assets/clima.png";
+import ShortLink from "../assets/shortlink.png";
 
 
 
@@ -64,12 +65,12 @@ export const PROJECTS_MOCK: ProjectType[] = [
   },
   {
     id: 5,
-    imgPath: Backend,
-    title: "Board Tasks",
-    subtitle: "Projeto BoardTasks",
-    tools: ["nodejs","swagger","mongodb"],
-    desc: "Desenvolvido em Node.js com Express, BoardTask tem como objetivo ajudar a organizar suas tarefas da melhor forma. Na sua criação, são utilizadas ferramentas como bcrypt para criptografia dos dados dos usuários e JWT para autenticação, além do Swagger para documentação automatizada, NoSQL MongoDB, entre outras. Seja na gestão de projetos complexos ou no gerenciamento de tarefas diárias, o BoardTask é a solução ideal para manter a produtividade e a organização em dia.",
-    web: "https://github.com/Gguife/BoardTasks-back",
+    imgPath: ShortLink,
+    title: "Shortener link",
+    subtitle: "Encurtador de links",
+    tools: ["nodejs","MySQL", "Sequelize", "docker-compose", "Jest"],
+    desc: "Shortener link um sistema de encurtamento de links, que também coleta informações, como IP, navegador e horário da ultima vez que o link foi utlizado.  Desenvolvido com Node.js, Sequelize e MySQL, esse projeto simples teve como foco o aprimoramento das minhas habilidades! ",
+    web: "https://github.com/Gguife/link-shortener",
     category: "Back-end"
   },
   {
@@ -126,7 +127,7 @@ export const PROJECTS_MOCK: ProjectType[] = [
     id: 11,
     imgPath: Backend,
     title: "API para Conversão monetária",
-    subtitle: "Escola DNC",
+    subtitle: "Bravo",
     tools: ["nodejs","jest", "sequelize", "mysql", "docker"],
     desc: "O Software de Conversão Monetária é um desafio proposto pela Bravo com o objetivo de proporcionar a conversão das quatro principais moedas: EUR, BRL, BTC e USD. Para isso, o sistema interage com uma API pública que fornece os preços atualizados das moedas, simplificando assim o processo de conversão. Desenvolvida com foco na rapidez e na entrega de dados precisos, a aplicação foi desenvolvida com o intuito de garantir que meu sistema suporte determinadas moedas e que suas operações sejam eficientes.",
     web: "https://github.com/Gguife/Challenge-bravo",

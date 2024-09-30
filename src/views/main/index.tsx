@@ -41,7 +41,7 @@ const MainPage: React.FC = () => {
             tentando deixar a tecnologia mais simples e acessível, 
             enquanto navego pelo mundo digital.
           </p>
-          <Link to="/">Mais sobre mim</Link>
+          <Link to="/sobre">Mais sobre mim</Link>
         </div>
       </MainAboutMeCard>
 
@@ -51,20 +51,19 @@ const MainPage: React.FC = () => {
         {articles.length === 0 ? (
           <p>Carregando postagens...</p>
         ) : (
-          <div className="articles-list">
-            {articles.map((article) => (
-              <a href={article.url} target="_blank" rel="noopener noreferrer">
-                <div key={article.id} className="article-card">
-                  <img src={article.social_image} alt={article.title} />
-                  <div className="article-content">
-                    <h2>{article.title}</h2>
-                    <p>{article.description}</p>
-                      
-                  </div>
+        <div className="articles-list">
+          {articles.map((article) => (
+            <a href={article.url} target="_blank" rel="noopener noreferrer" key={article.id}>
+              <div className="article-card">
+                <img src={article.social_image} alt={article.title} />
+                <div className="article-content">
+                  <h2>{article.title}</h2>
+                  <p>{article.description}</p> 
                 </div>
-              </a>
-            ))}
-          </div>
+              </div>
+            </a>
+          ))}
+        </div>
         )}
       </MainArticleSection>
     </MainPageSection>
