@@ -18,9 +18,9 @@ const Login = () =>{
       });
 
       const token = response.data.token;
-      localStorage.setItem("authToken", token);
+      localStorage.setItem("token", token);
 
-      window.location.href = "/all-posts";
+      window.location.href = "/gerencia";
     }catch(err: any){
       setError("Error ao realizar login. Verifique as credenciais.");
       console.error("Error ao realizar login.", err);
