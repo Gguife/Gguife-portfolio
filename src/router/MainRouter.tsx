@@ -5,6 +5,9 @@ import Login from "../views/login/index.tsx";
 import ManagePost from "../views/manage/index.tsx";
 import ProtectedRoute from "../components/jwt/index.tsx";
 import NotFound from "../views/404/index.tsx";
+import ProjectsView from "../views/project/view/index.tsx";
+import CreateProject from "../views/project/create/index.tsx";
+import ProjectEdit from "../views/project/edit/index.tsx";
 
 export const MainRouter = () =>{
   const router = useRoutes([
@@ -16,6 +19,30 @@ export const MainRouter = () =>{
       element: (
         <ProtectedRoute>
           <ManagePost />
+        </ProtectedRoute>
+      )
+    },
+    {
+      path: "/gerencia/projetos/all",
+      element: (
+        <ProtectedRoute>
+          <ProjectsView />
+        </ProtectedRoute>
+      )
+    },
+    {
+      path: "/gerencia/projeto/criar",
+      element: (
+        <ProtectedRoute>
+          <CreateProject />
+        </ProtectedRoute>
+      )
+    },
+    {
+      path: "/gerencia/projeto/editar/:id",
+      element: (
+        <ProtectedRoute>
+          <ProjectEdit />
         </ProtectedRoute>
       )
     },
