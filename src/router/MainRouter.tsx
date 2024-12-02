@@ -23,7 +23,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projetos/all",
+      path: "/gerencia/projetos/todos",
       element: (
         <ProtectedRoute>
           <ProjectsView />
