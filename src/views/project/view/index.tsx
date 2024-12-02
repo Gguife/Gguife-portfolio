@@ -18,13 +18,13 @@ const ProjectsView = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchProjects = async () => {
-    try{
+    try {
       const response = await axios.get("http://localhost:8080/projects");
-      setProjects(response.data.projects);
-    }catch(err: any) {
+      setProjects(response.data.projects || []); 
+    } catch (err: any) {
       console.error("Erro inesperado:", err);
     }
-  }
+  };
 
   const openModal = (id: number) => {
     setSelectProjectId(id);
@@ -35,12 +35,12 @@ const ProjectsView = () => {
     setIsModalOpen(false);
     setSelectProjectId(null);
   };
-  
+
   const handlerDelete = async () => {
     if (selectProjectId === null) return;
 
     const token = localStorage.getItem("token");
-    try{
+    try {
       await axios.delete(`http://localhost:8080/project/${selectProjectId}`, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -50,46 +50,53 @@ const ProjectsView = () => {
 
       setProjects((prev) => prev.filter((project) => project.id !== selectProjectId));
       closeModal();
-    }catch(err: any) {
+    } catch (err: any) {
       console.error("Erro ao deletar projeto:", err);
     }
-  }
-
+  };
 
   useEffect(() => {
     fetchProjects();
-  }, [])
+  }, []);
 
   return (
     <ProjectsViewSection>
       <div className="header-section">
         <h1>Todos os seus projetos</h1>
-        <Link to='/gerencia/projeto/criar'>Criar Projeto</Link>
+        <Link to="/gerencia/projeto/criar">Criar Projeto</Link>
       </div>
-      <ProjectsCards>
-        {projects.map((project) => (
-          <div key={project.id} className="ind-project-card">
-            <Link to={`/gerencia/projeto/editar/${project.id}`} className="project-edit"><FaPen /></Link>
-            <img src={project.imageUrl} alt={`Imagem do projeto ${project.title}`} />
-            <h3>{project.title}</h3>
-            <ul className="tools">
-              {project.tools
-                .split(", ")
-                .map((tool, index) => (
-                  <li key={index} className="tool">
-                    {tool}
-                  </li>
-                ))}
-            </ul>
+      {projects && projects.length === 0 ? (
+        <p>Não há projetos disponíveis.</p> // Exibe quando não há projetos
+      ) : (
+        <ProjectsCards>
+          {projects.map((project) => (
+            <div key={project.id} className="ind-project-card">
+              <Link to={`/gerencia/projeto/editar/${project.id}`} className="project-edit">
+                <FaPen />
+              </Link>
+              <img src={project.imageUrl} alt={`Imagem do projeto ${project.title}`} />
+              <h3>{project.title}</h3>
+              <ul className="tools">
+                {project.tools
+                  .split(", ")
+                  .map((tool, index) => (
+                    <li key={index} className="tool">
+                      {tool}
+                    </li>
+                  ))}
+              </ul>
 
-            <button className="project-delete" onClick={() => openModal(project.id)}>Deletar</button>
-          </div>
-        ))}
-      </ProjectsCards>
+              <button className="project-delete" onClick={() => openModal(project.id)}>
+                Deletar
+              </button>
+            </div>
+          ))}
+        </ProjectsCards>
+      )}
       {isModalOpen && (
-      <ProjectModal>
+        <ProjectModal>
           <div className="modal-content">
-            <p>Tem certeza que deseja deletar <br/> este projeto?</p>
+            <p>Tem certeza que deseja deletar <br /> este projeto?</p>
             <div className="modal-actions">
               <button onClick={handlerDelete} className="confirm-delete">
                 Sim, deletar
@@ -98,11 +105,11 @@ const ProjectsView = () => {
                 Cancelar
               </button>
             </div>
-            </div>
-      </ProjectModal>
+          </div>
+        </ProjectModal>
       )}
     </ProjectsViewSection>
-  )
-}
+  );
+};
 
 export default ProjectsView;
