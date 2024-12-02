@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { CreateProjectSection } from "./style";
 
 const CreateProject = () => {
+  const [categories, setCategories] = useState<any[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<number | string>("");  // ID da categoria selecionada
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tools, setTools] = useState("");
   const [linkDeploy, setLinkDeploy] = useState("");
   const [linkRepository, setLinkRepository] = useState("");
-  const [categories, setCategories] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchCategory = async () => {
+      try{
+        const response = await axios.get("http://localhost:8080/categories");
+
+        setCategories(response.data.categories);
+      }catch(err: any){
+        console.error("Erro ao carregar categorias:", err);
+        setError("Erro ao carregar categorias.");
+      }
+    };
+
+    fetchCategory();
+  }, [])
+
 
   const handlerSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -22,7 +39,7 @@ const CreateProject = () => {
     formData.append("tools", tools);
     formData.append("linkDeploy", linkDeploy);
     formData.append("linkRepository", linkRepository);
-    formData.append("categories", categories);
+    formData.append("categoryId", selectedCategory.toString());
 
     if(image){
       formData.append("imageUrl", image);
@@ -38,7 +55,7 @@ const CreateProject = () => {
         },
       });
 
-      window.location.href = "/gerencia/projetos/all";
+      window.location.href = "/gerencia/projetos/todos";
     }catch(err: any){
       if (err.response) {
         const { message } = err.response.data;
@@ -68,8 +85,14 @@ const CreateProject = () => {
         <label htmlFor="linkRepository">link repositório</label>
         <input type="text" name="linkRepository" value={linkRepository} id="linkRepository" onChange={(e) => {setLinkRepository(e.target.value)}}  />
         
-        <label htmlFor="categories">Categoria</label>
-        <input type="text" name="categories" value={categories} id="categories" onChange={(e) => {setCategories(e.target.value)}}  />
+        <label htmlFor="categoryId">Categoria</label>
+        <select name="categoryId" value={selectedCategory} id="categoryId" onChange={(e) => {setSelectedCategory(e.target.value)}}>
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
         
         <label htmlFor="imageUrl">Imagem do projeto</label>
         <input 
