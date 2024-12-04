@@ -9,7 +9,6 @@ interface Project {
   title: string;
   content: string;
   tools: string;
-  categories: string;
   imageUrl: string;
   categoryId: number;
 }
@@ -18,7 +17,7 @@ export const Projects = () => {
   const [allProjects, setAllProjects] = useState<Project[]>([]); // Armazena todos os projetos
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]); // Armazena os projetos filtrados
   const [visibleProjects, setVisibleProjects] = useState<number>(6); // Controla quantos projetos são visíveis inicialmente
-  const [selectedCategory, setSelectedCategory] = useState<number | null>(1);
+  const [selectedCategory, setSelectedCategory] = useState<number>(1);
 
   const fetchProjects = async () => {
     try {
@@ -29,15 +28,11 @@ export const Projects = () => {
     }
   };
 
-  const filterProjectsByCategory = (categoryId: number | null) => {
-    if (categoryId === null) {
-      setFilteredProjects(allProjects);
-    } else {
-      const filtered = allProjects.filter(
-        (project) => project.categoryId === categoryId
-      );
-      setFilteredProjects(filtered);
-    }
+  const filterProjectsByCategory = (categoryId: number) => {
+    const filtered = allProjects.filter(
+      (project) => project.categoryId === categoryId
+    );
+    setFilteredProjects(filtered);
   };
 
   const handleShowMore = () => {
@@ -104,11 +99,11 @@ export const Projects = () => {
             </div>
           ))
         ) : (
-          <p>Nenhum projeto encontrado para esta categoria.</p>
+          <p>Não existe nenhum projeto para esta categoria.</p>
         )}
       </ProjectCard>
       {visibleProjects < filteredProjects.length && (
-        <button onClick={handleShowMore} className="show-more">Show More <MdKeyboardDoubleArrowDown className="show-more-icon" /></button>
+        <button onClick={handleShowMore} className="show-more">Mostrar mais <MdKeyboardDoubleArrowDown className="show-more-icon" /></button>
       )}
     </ProjectSection>
   );

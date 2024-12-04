@@ -21,6 +21,12 @@ padding: 3rem;
       font-size: 1.4rem;
     }
   }
+
+  @media(max-width: 530px){
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const ProjectButton = styled.div`
@@ -46,6 +52,13 @@ gap: 1.5rem;
   
   button{
     padding: .8rem 1rem; 
+  }
+}
+
+@media(max-width: 400px){
+  button{
+    padding: .8rem 1rem;
+    font-size: .7rem; 
   }
 }
 `;
