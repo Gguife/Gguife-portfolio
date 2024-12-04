@@ -21,6 +21,17 @@ padding: 2rem 1rem;
       border-radius: 5px;
     } 
   }
+
+  .search {
+    margin: 2rem 0;
+    
+    input{
+      width: 100%;
+      padding: .7rem;
+      border-radius: 5px;
+      border: none;
+    }
+  }
 `;
 
 export const ProjectsCards = styled.div`
@@ -93,6 +104,31 @@ gap: 1rem;
   }
 
 }
+
+`;
+
+export const ProjectPaginate = styled.div`
+  padding: 1rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  button {
+    padding: .5rem 1.1rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+
+  button.active {
+    pointer-events: none; 
+    background-color: #f67f01; 
+    color: #000; 
+    cursor: default; 
+  }
 
 `;
 
