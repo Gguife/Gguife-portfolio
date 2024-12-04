@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ProjectModal, ProjectsCards, ProjectsViewSection } from "./style";
+import { ProjectModal, ProjectPaginate, ProjectsCards, ProjectsViewSection } from "./style";
 import { FaPen } from "react-icons/fa";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -16,11 +16,20 @@ const ProjectsView = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectProjectId, setSelectProjectId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [search, setSearch] = useState<string>('');
+  const [take] = useState<number>(6);
+  const [skip, setSkip] = useState<number>(0);
+  const [total, setTotal] = useState<number>(0);
+
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/projects");
+      const response = await axios.get("http://localhost:8080/projects", {
+        params: {search, take, skip}
+      });
+
       setProjects(response.data.projects || []); 
+      setTotal(response.data.total || 0);
     } catch (err: any) {
       console.error("Erro inesperado:", err);
     }
@@ -41,7 +50,7 @@ const ProjectsView = () => {
 
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:8080/project/${selectProjectId}`, {
+      await axios.delete(`http://localhost:8080/projects/${selectProjectId}`, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
@@ -57,7 +66,18 @@ const ProjectsView = () => {
 
   useEffect(() => {
     fetchProjects();
-  }, []);
+  }, [search, skip]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+    setSkip(0);
+  }
+
+  const handlePageClick = (pageNumber: number) => {
+    setSkip((pageNumber - 1) * take);
+  };
+
+  const totalPages = Math.ceil(total / take);
 
   return (
     <ProjectsViewSection>
@@ -65,8 +85,11 @@ const ProjectsView = () => {
         <h1>Todos os seus projetos</h1>
         <Link to="/gerencia/projeto/criar">Criar Projeto</Link>
       </div>
+      <div className="search">
+        <input type="text" name="search" id="search" value={search} onChange={handleSearch} placeholder="Buscar projetos..." />
+      </div>
       {projects && projects.length === 0 ? (
-        <p>Não há projetos disponíveis.</p> // Exibe quando não há projetos
+        <p>Não há projetos disponíveis.</p>
       ) : (
         <ProjectsCards>
           {projects.map((project) => (
@@ -93,6 +116,17 @@ const ProjectsView = () => {
           ))}
         </ProjectsCards>
       )}
+      <ProjectPaginate>
+      {[...Array(totalPages)].map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageClick(index + 1)}
+            className={skip / take === index ? "active" : ""}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </ProjectPaginate>
       {isModalOpen && (
         <ProjectModal>
           <div className="modal-content">

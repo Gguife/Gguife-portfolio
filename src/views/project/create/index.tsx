@@ -55,7 +55,7 @@ const CreateProject = () => {
         },
       });
 
-      window.location.href = "/gerencia/projetos/todos";
+      window.location.href = "/gerencia/projetos";
     }catch(err: any){
       if (err.response) {
         const { message } = err.response.data;
@@ -87,6 +87,7 @@ const CreateProject = () => {
         
         <label htmlFor="categoryId">Categoria</label>
         <select name="categoryId" value={selectedCategory} id="categoryId" onChange={(e) => {setSelectedCategory(e.target.value)}}>
+          <option value="">Selecione uma categoria:</option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
               {category.name}

@@ -11,7 +11,6 @@ interface Project {
   tools: string;
   linkDeploy: string;
   linkRepository: string;
-  categories: string;
 }
 
 
@@ -47,13 +46,14 @@ const ProjectEdit = () => {
     const token = localStorage.getItem("token");
     try {
       if(project) {
-          await axios.put(`http://localhost:8080/project/${id}`, project, {
+          await axios.put(`http://localhost:8080/projects/${id}`, project, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           }
         });
         alert('Projeto atualizado com sucesso!');
+        window.location.href = "/gerencia/projetos";
       }
     }catch(err: any) {
       console.error("Erro ao salvar o projeto:", err.message);
@@ -84,10 +84,7 @@ const ProjectEdit = () => {
         
         <label htmlFor="linkRepository">link repositório</label>
         <input type="text" name="linkRepository" value={project?.linkRepository} id="linkRepository" onChange={handlerChange} />
-        
-        <label htmlFor="category">Categoria</label>
-        <input type="text" name="category" value={project?.categories} id="category" onChange={handlerChange} />
-
+    
         <button type="button" onClick={saveChanges}>Salvar Alterações</button>
       </form>
     </ProjectEditSection>
