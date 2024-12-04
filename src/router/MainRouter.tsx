@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 import About from "../views/about/index.tsx";
 import Main from "../views/main/index.tsx";
 import Login from "../views/login/index.tsx";
-import ManagePost from "../views/manage/index.tsx";
+import ManagePost from "../views/dashboard/index.tsx";
 import ProtectedRoute from "../components/jwt/index.tsx";
 import NotFound from "../views/404/index.tsx";
 import ProjectsView from "../views/project/view/index.tsx";
@@ -15,7 +15,7 @@ export const MainRouter = () =>{
     {path: "/sobre", element: <About />},
     {path: "/login", element: <Login />},
     {
-      path: "/gerencia",
+      path: "/dashboard",
       element: (
         <ProtectedRoute>
           <ManagePost />
@@ -23,7 +23,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projetos/todos",
+      path: "/gerencia/projetos",
       element: (
         <ProtectedRoute>
           <ProjectsView />
@@ -31,7 +31,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projeto/criar",
+      path: "/gerencia/projetos/criar",
       element: (
         <ProtectedRoute>
           <CreateProject />
@@ -39,7 +39,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projeto/editar/:id",
+      path: "/gerencia/projetos/editar/:id",
       element: (
         <ProtectedRoute>
           <ProjectEdit />
