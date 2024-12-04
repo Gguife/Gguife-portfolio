@@ -30,17 +30,14 @@ const ManagePost = () => {
         }
       });
 
-      console.log("Resposta API: ", response.data)
-
       const user = response.data.user;
       setUsername(user.username);
-    }catch(error){
-      
+    }catch(err: any){
+      console.error("Erro inesperado:", err);
     }
   } 
 
   useEffect(() => {
-    console.log("useEffect foi chamado");
     userData();
   }, [])
 
@@ -49,7 +46,7 @@ const ManagePost = () => {
       <h1>Seja bem-vindo <span>{username}</span></h1>
       <div className="link-posts">
         <Link to="">Artigos</Link>
-        <Link to="">Projetos</Link>
+        <Link to="/gerencia/projetos">Projetos</Link>
       </div>
     </ManageSection>
   )
