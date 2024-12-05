@@ -12,7 +12,7 @@ const Login = () =>{
     setError("");
 
     try{
-      const response = await axios.post("http://localhost:8080/login", {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
         username,
         password
       });
@@ -20,7 +20,7 @@ const Login = () =>{
       const token = response.data.token;
       localStorage.setItem("token", token);
 
-      window.location.href = "/gerencia";
+      window.location.href = "/dashboard";
     }catch(err: any){
       setError("Error ao realizar login. Verifique as credenciais.");
       console.error("Error ao realizar login.", err);

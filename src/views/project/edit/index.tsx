@@ -20,7 +20,7 @@ const ProjectEdit = () => {
 
   const fetchProject = async () => {
     try{
-      const response = await axios.get(`http://localhost:8080/project/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/project/${id}`);
     
       const projectData = response.data.project;
       if(!projectData){
@@ -46,7 +46,7 @@ const ProjectEdit = () => {
     const token = localStorage.getItem("token");
     try {
       if(project) {
-          await axios.put(`http://localhost:8080/projects/${id}`, project, {
+          await axios.put(`${import.meta.env.VITE_BACKEND_URL}/projects/${id}`, project, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

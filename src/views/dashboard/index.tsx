@@ -24,7 +24,7 @@ const ManagePost = () => {
 
       if(!userId) return console.error("Id do usuário não encontrado");
 
-      const response = await axios.get(`http://localhost:8080/user/${userId}`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -16,7 +16,7 @@ const CreateProject = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try{
-        const response = await axios.get("http://localhost:8080/categories");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/categories`);
 
         setCategories(response.data.categories);
       }catch(err: any){
@@ -48,7 +48,7 @@ const CreateProject = () => {
     const token = localStorage.getItem("token");
 
     try{
-      await axios.post("http://localhost:8080/project", formData, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/project`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

@@ -24,7 +24,7 @@ const ProjectsView = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/projects", {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/projects`, {
         params: {search, take, skip}
       });
 
@@ -50,7 +50,7 @@ const ProjectsView = () => {
 
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:8080/projects/${selectProjectId}`, {
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/projects/${selectProjectId}`, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
