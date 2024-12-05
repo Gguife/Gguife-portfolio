@@ -21,7 +21,9 @@ export const Projects = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/projects");
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/projects`, {
+        params: {username: 'ggflinux'}
+      });
       setAllProjects(response.data.projects || []);
     } catch (err: any) {
       console.error("Erro ao buscar projetos:", err);
