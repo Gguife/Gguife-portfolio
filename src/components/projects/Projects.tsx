@@ -3,6 +3,7 @@ import { ProjectSection, ProjectButton, ProjectCard } from "./style";
 import { IoEyeSharp } from "react-icons/io5";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -22,7 +23,7 @@ export const Projects = () => {
   const fetchProjects = async () => {
     try {
       const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/projects`, {
-        params: {username: 'ggflinux'}
+        params: {username: 'linux'}
       });
       setAllProjects(response.data.projects || []);
     } catch (err: any) {
@@ -85,19 +86,21 @@ export const Projects = () => {
         {filteredProjects.length > 0 ? (
           filteredProjects.slice(0, visibleProjects).map((project) => (
             <div key={project.id} className="project-card">
-              <img
-                src={project.imageUrl}
-                alt={`imagem do projeto ${project.title}`}
-              />
-              <h3>{project.title}</h3>
-              <ul className="tools">
-                {project.tools.split(", ").map((tool, index) => (
-                  <li key={index} className="tool">
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-              <IoEyeSharp className="eye-icon" />
+              <Link to={`/projeto/${project.id}`}>
+                <img
+                  src={project.imageUrl}
+                  alt={`imagem do projeto ${project.title}`}
+                />
+                <h3>{project.title}</h3>
+                <ul className="tools">
+                  {project.tools.split(", ").map((tool, index) => (
+                    <li key={index} className="tool">
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+                <IoEyeSharp className="eye-icon" />
+              </Link>
             </div>
           ))
         ) : (
