@@ -5,14 +5,16 @@ import Login from "../views/login/index.tsx";
 import ManagePost from "../views/dashboard/index.tsx";
 import ProtectedRoute from "../components/jwt/index.tsx";
 import NotFound from "../views/404/index.tsx";
-import ProjectsView from "../views/project/view/index.tsx";
-import CreateProject from "../views/project/create/index.tsx";
-import ProjectEdit from "../views/project/edit/index.tsx";
+import ProjectsView from "../views/dashboard/project/view/index.tsx";
+import CreateProject from "../views/dashboard/project/create/index.tsx";
+import ProjectEdit from "../views/dashboard/project/edit/index.tsx";
+import ProjectSelected from "../views/project/index.tsx";
 
 export const MainRouter = () =>{
   const router = useRoutes([
     {path: "/", element: <Main />},
     {path: "/sobre", element: <About />},
+    {path: "/projeto/:id", element: <ProjectSelected />},
     {path: "/login", element: <Login />},
     {
       path: "/dashboard",
@@ -31,7 +33,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projetos/criar",
+      path: "/gerencia/projeto/criar",
       element: (
         <ProtectedRoute>
           <CreateProject />
@@ -39,7 +41,7 @@ export const MainRouter = () =>{
       )
     },
     {
-      path: "/gerencia/projetos/editar/:id",
+      path: "/gerencia/projeto/editar/:id",
       element: (
         <ProtectedRoute>
           <ProjectEdit />
