@@ -82,7 +82,6 @@ gap: 3rem;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    gap: .5rem;
     transition: .4s;
 
     &:hover {
@@ -100,6 +99,7 @@ gap: 3rem;
     h3 {
       color: #000;
       font-size: 1.1rem;
+      margin: .7rem 0 0 0;
     }
 
     .tools {
