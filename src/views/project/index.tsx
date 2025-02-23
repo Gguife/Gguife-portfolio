@@ -25,8 +25,6 @@ const ProjectSelected = () => {
       const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/project/${id}`);
       const projectData = response.data.project;
 
-      console.log(projectData)
-
       setProject(projectData);
     }catch(err: any){
       console.error("Erro ao buscar o projeto:", err.message);
