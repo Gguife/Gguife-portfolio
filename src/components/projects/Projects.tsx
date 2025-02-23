@@ -104,7 +104,7 @@ export const Projects = () => {
             </div>
           ))
         ) : (
-          <p>Não existe nenhum projeto para esta categoria.</p>
+          <p>Nenhum projeto encontrado para esta categoria.</p>
         )}
       </ProjectCard>
       {visibleProjects < filteredProjects.length && (
