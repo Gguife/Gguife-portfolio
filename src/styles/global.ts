@@ -1,6 +1,25 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+:root {
+  --primary-color: #25262a;
+  --primary-soft-color: #37383c;
+  --secondary-color: #f67f01;
+  --text-primary-color: #FaFaFa;
+  --text-second-color:rgb(131, 131, 138);
+  --text-link-color: #557287;
+
+  --text-title-size: 2rem;
+  --text-subtitle-size: 1.5rem;
+  --text-medium-size: 1.rem;
+  --text-small-size: .8rem; 
+
+  --gap-high-size: 3rem;
+  --gap-medium-size: 2rem;
+  --gap-small-size: .9rem;  
+}
+
+
 *{
   margin: 0;
   padding: 0;
@@ -10,9 +29,9 @@ html, body {
   scroll-behavior: smooth;
 }
 body{
-  background-color: #25262a;
-  color: #FaFaFa; 
-  font-family: "Work Sans", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-primary-color); 
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; 
   transition: all .25s linear;
 }
 
@@ -23,13 +42,14 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
   border-radius: 10px;
-  background-color: #37383c;
+  background-color: var(--primary-soft-color);
 }
 
 main{
   max-width: 1400px;
   margin: 0 auto;
 }
+  
 section{
   max-width: 1400px;
   margin: 0 auto;
@@ -39,38 +59,16 @@ a{
   text-decoration: none;
 }
 
-form {
-  background-color: #37383c;
-  max-width: 800px;
-  padding: 2rem 2rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  border-radius: 10px;
-  
-  input{
-    width: 100%;
-    padding: .6rem .5rem; 
-    border-radius: 5px;
-    border: none;
-  }
-    
-  button{
-    margin-top: 2rem;
-    border-radius: 5px;
-    padding: .6rem 0;
-    width: 200px;
-    background-color: #f67f01;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-  }
+.internal-links {
+  color: var(--text-link-color);
+  max-width: 150px;
+  font-size: .9rem;
+  font-weight: 700;
+  transition: .3s;
 
-    textarea{
-    border-radius: 5px;
-    resize: none;
-    padding: .5rem;
+  &:hover {
+    color: #9999; 
   }
 }
+
 `;
