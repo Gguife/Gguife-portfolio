@@ -1,30 +1,30 @@
 import styled from "styled-components";
 
-export const ProjectSection = styled.main`
+export const ProjectSection = styled.section`
 padding: 3rem;
+width: 100%;
+
   h1{
-    font-size: 3rem;
+    font-size: var(--text-title-size);
     text-align: center;
   }
 
   .show-more {
-    color: #FFF;
     border: none;
     background: none;
     padding: 1rem;
-    font-size: 1.2rem; 
     display: flex;
     align-items: end;
     cursor: pointer;
 
     .show-more-icon{
-      font-size: 1.4rem;
+      font-size: var(--text-subtitle-size);
     }
   }
 
   @media(max-width: 530px){
     h1 {
-      font-size: 2rem;
+      font-size: var(--text-subtitle-size);
     }
   }
 `;
@@ -65,17 +65,16 @@ gap: 1.5rem;
 
 export const ProjectCard = styled.div`
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, 1fr);
 place-items: start;
 padding: 10px;
-gap: 3rem;
+gap: 2rem;
 
   .project-card {
     position: relative;
-    width: 100%;
-    background-color: #999;
+    background-color: #1d1d1f;
     padding: 1rem;
-    border-radius: 7px 0 7px 0;
+    border-radius: 5px;
     max-height: 500px;
     height: 100%;
     display: flex;
@@ -85,7 +84,7 @@ gap: 3rem;
     transition: .4s;
 
     &:hover {
-      img, h3, .tools {
+      img, h3, .introduction, .tools {
         opacity: .1;
       }
     }
@@ -97,27 +96,27 @@ gap: 3rem;
     }
 
     h3 {
-      color: #000;
-      font-size: 1.1rem;
+      color: #f67f01;
+      font-size: 1rem;
       margin: .7rem 0 0 0;
+    }
+
+    .introduction {
+      color: #fff;
+      font-size: .9rem;
+      padding: .3rem 0 .9rem 0;
     }
 
     .tools {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: .3rem;
+      gap: .5rem;
       list-style: none;
-      padding: .3rem .2rem;
-      margin-bottom: 1.2rem;
-      
       .tool{
-        background-color: #f67f01;
-        padding: .4rem .8rem;
-        font-size: .6rem;
-        border-radius: 4px;
-        color: #000;
-        font-weight: 700;
+        font-size: .7rem;
+        background-color: #25262a;  
+        padding: 5px 7px;
+        color:  #999;
       }
     }
 
