@@ -10,7 +10,8 @@ export const Header = () => {
       <HeaderContent>
         <Link to="/" className="logo">gguife</Link>
         <div className="header-nav">
-          <ul>    
+          <a href="" className="internal-links">Blog</a> 
+          <ul>   
             <li><a href="https://www.instagram.com/ggf.lnx" target='__blank'><FaInstagram  className="icons" /></a></li>
             <li><a href="https://github.com/Gguife" target='__blank'><FaGithub className="icons" /></a></li>
             <li><a href="https://www.linkedin.com/in/gguife/" target='__blank'><FaLinkedinIn className="icons" /></a></li>  
