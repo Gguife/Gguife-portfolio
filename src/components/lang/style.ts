@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LangContainer = styled.div`
-background-color: #f67f01;
+background-color: var(--text-link-color);
 color: #FFF;
 padding: .2rem;
 opacity: .7;
