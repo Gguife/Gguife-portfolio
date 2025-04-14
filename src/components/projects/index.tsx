@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { ProjectSection, ProjectButton, ProjectCard } from "./style";
-import { IoEyeSharp } from "react-icons/io5";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { ProjectSection, ProjectsCard } from "./style";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Image from "../../assets/kenai.png";
 
 interface Project {
   id: number;
@@ -16,100 +13,92 @@ interface Project {
   categoryId: number;
 }
 
+const categoryNames: { [key: number]: string } = {
+  1: "Frontend",
+  2: "Backend",
+  3: "Software"
+}
+
 export const Projects = () => {
-  const [allProjects, setAllProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]); 
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [visibleProjects, setVisibleProjects] = useState<number>(6);
-  const [selectedCategory, setSelectedCategory] = useState<number>(1);
-  const [page, setPage] = useState<number>(1);
-  const [totalPages, setTotalPages] = useState<number>(1);
-  const limit = 8;
-
-  const fetchProjects = async (newPage: number = 1) => {
-    try {
-      const username = "linux";
-      const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/projects/${username}?page=${newPage}&limit=${limit}`
-      );
-
-      setAllProjects(response.data.projects || []);
-      setPage(response.data.page);
-      console.log(response.data.total)
-      setTotalPages(Math.ceil(response.data.total / limit));
-    } catch (err: any) {
-      console.error("Erro ao buscar projetos:", err);
-    }
-  };
+  const [selectedCategory, setSelectedCategory] = useState(1);
+  const limit = 9;
 
   useEffect(() => {
-    fetchProjects();
+    const fetchProjects = async () => {
+      try {
+        const username = "linux";
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/projects/${username}?limit=${limit}`
+        );
+
+        console.log(response.data.projects);
+        setProjects(response.data.projects);
+      } catch (err: any) {
+        console.error("Erro ao buscar projetos:", err);
+      }
+    };
+
+    fetchProjects(); 
   }, []);
-
+  
   useEffect(() => {
-    filterProjectsByCategory(selectedCategory);
-  }, [selectedCategory, allProjects]);
+    filteredProjectByCategory(selectedCategory);
+  }, [projects, selectedCategory])
 
-  const filterProjectsByCategory = (categoryId: number) => {
-    const filtered = allProjects.filter(
+
+  const filteredProjectByCategory = (categoryId: number) => { 
+    const filtered = projects.filter(
       (project) => project.categoryId === categoryId
     );
     setFilteredProjects(filtered);
-    setVisibleProjects(4);
   };
 
   return (
     <ProjectSection>
-      <h1>Projetos pessoais mais recentes</h1>
-      <ProjectButton>
-        {[1, 2, 3].map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            style={{
-              backgroundColor: selectedCategory === category ? "#f67f01" : "#f8f9fa",
-              color: "black",
-            }}
-          >
-            {category === 1 ? "Front-end" : category === 2 ? "Back-end" : "Sistemas"}
-          </button>
-        ))}
-      </ProjectButton>
-      <ProjectCard>
-        {filteredProjects.length > 0 ? (
-          filteredProjects.slice(0, visibleProjects).map((project) => (
-            <div key={project.id} className="project-card">
-              <Link to={`/projeto/${project.id}`}>
-                <img
-                  src={project.imageUrl || Image}
-                  alt={`Imagem do projeto ${project.title}`}
-                />
-                <h3>{project.title}</h3>
-                <p className="introduction">{project.introduction}</p>
-                <ul className="tools">
-                  {project.tools.map((tool, index) => (
-                    <li key={index} className="tool">{tool}</li>
-                  ))}
-                </ul>
-                <IoEyeSharp className="eye-icon" />
-              </Link>
-            </div>
-          ))
+      <h1>Projetos</h1>
+      
+      <ProjectsCard>
+        {filteredProjects.length === 0 ? (
+          <p className="no-projects">Sem projetos para esta categoria...</p>
         ) : (
-          <p>Nenhum projeto encontrado para esta categoria.</p>
+          <div className="projects-list">
+            {filteredProjects.map((project) => (
+              <div className="project-card" key={project.id}>
+                <span>{categoryNames[project.categoryId]}</span>
+                <h3>{project.title} <Link to={`/projeto/${project.id}`} className="internal-links read-about"> Veja projeto ➔</Link></h3>
+                <p>{project.introduction}</p>
+              </div>
+            ))}
+          </div>
         )}
-      </ProjectCard>
 
-      {visibleProjects < filteredProjects.length && (
-        <button onClick={() => setVisibleProjects((prev) => prev + 6)} className="show-more">
-          Mostrar mais <MdKeyboardDoubleArrowDown className="show-more-icon" />
-        </button>
-      )}
-
-      <div className="pagination">
-        <button disabled={page === 1} onClick={() => fetchProjects(page - 1)}>Anterior</button>
-        <span>Página {page} de {totalPages}</span>
-        <button disabled={page === totalPages} onClick={() => fetchProjects(page + 1)}>Próximo</button>
-      </div>
+        <div className="project-categories">
+          <button onClick={() => setSelectedCategory(1)}
+            style={{
+              backgroundColor: selectedCategory === 1 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+              color: selectedCategory === 1 ? "var(--text-primary-color)" : "var(--text-second-color)",
+          }}>
+            Front-end
+          </button>
+          <button onClick={() => setSelectedCategory(2)}
+            style={{
+              backgroundColor: selectedCategory === 2 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+              color: selectedCategory === 2 ? "var(--text-primary-color)" : "var(--text-second-color)",
+          }}>
+            Back-end
+          </button>
+          <button onClick={() => setSelectedCategory(3)}
+            style={{
+              backgroundColor: selectedCategory === 3 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+              color: selectedCategory === 3 ? "var(--text-primary-color)" : "var(--text-second-color)",
+          }}>
+            Software
+          </button>
+        </div>
+      </ProjectsCard>
+      <Link to="" className="internal-links read-more">Veja todos os projetos ➔</Link>
     </ProjectSection>
   );
 };
