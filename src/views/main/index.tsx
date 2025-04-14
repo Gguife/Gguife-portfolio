@@ -1,70 +1,123 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { MainPageSection, MainAboutMeCard, MainArticleSection } from "./style";
-import Perfil from "../../assets/profile.jfif";
+import { MainPageSection, MainAboutMeCard, MainArticleSection, ArticleCard } from "./style";
 
 interface Article {
   id: number;
   title: string;
-  description: string;
-  social_image: string;
-  url: string;
-  tag_list: string[];
+  introduction: string;
+  tagId: number;
+}
+
+const tagNames: { [key: number]: string } = {
+  1: "Tech",
+  2: "Lifestyle",
+  3: "Career"
 }
 
 const MainPage: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+  const [selectedTag, setSelectedTag] = useState(1);
+  const limit = 9;
 
+  
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get<Article[]>("https://dev.to/api/articles?username=gguife&per_page=6&sort_by=published_at");
-        setArticles(response.data);
+        const username = 'linux';
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/articles/${username}?limi=${limit}`
+        );
+
+        console.log(response.data.articles)
+        setArticles(response.data.articles);
       } catch (error) {
         console.error("Erro ao buscar artigos", error);
       }
     };
-
+    
     fetchArticles();
-  }, []);
+  }, []); 
+
+  useEffect(() => {
+      filteredArticleByTag(selectedTag);
+  }, [articles, selectedTag]);
+
+  const filteredArticleByTag = (tagId: number) => {
+    const filtered = articles.filter(
+      (article) => article.tagId === tagId
+    );
+    setFilteredArticles(filtered);
+    console.log(filtered);
+  }
 
   return (
+
     <MainPageSection>
       <MainAboutMeCard>
-        <img src={Perfil} alt="Foto de perfil" />
         <div className="main-about-description">
           <h3>Guilherme Gomes<span>Desenvolvedor web full-stack</span></h3>
           <p>
             Criando soluções que conectam o que está por trás das telas com o que vemos.
-            Aqui compartilho os desafios e conquistas do dia-a-dia,
-            tentando deixar a tecnologia mais simples e acessível, 
+            Aqui, compartilho experiências, desafios e conquistas sobre tecnologia, programação, cibersegurança e minha jornada pessoal, 
+            com objetivo de deixar a tecnologia mais simples e acessível, 
             enquanto navego pelo mundo digital.
           </p>
-          <Link to="/sobre">Mais sobre mim</Link>
+          <Link to="/sobre" className="internal-links">Mais sobre mim ➔</Link>
         </div>
       </MainAboutMeCard>
 
       <MainArticleSection>
         <h1>Últimas postagens</h1>
 
-        {articles.length === 0 ? (
-          <p>Carregando postagens...</p>
-        ) : (
-        <div className="articles-list">
-          {articles.map((article) => (
-            <a href={article.url} target="_blank" rel="noopener noreferrer" key={article.id}>
+        <ArticleCard>
+          {filteredArticles.length === 0 ? (
+            <p className="no-articles">Sem postagens para esta categoria...</p>
+          ) : (
+            <div className="articles-list">
+            {filteredArticles.map((article) => (
               <div className="article-card">
-                <img src={article.social_image} alt={article.title} />
-                <div className="article-content">
-                  <h2>{article.title}</h2>
-                  <p>{article.description}</p> 
-                </div>
+                <span>sept 25, 2024 <span className="tag">{tagNames[article.tagId]}</span></span>
+                <h3> 
+                  {article.title} 
+                  <Link to="" className="internal-links read-about" key={article.id}>
+                  Leia sobre ➔
+                  </Link>
+                </h3> 
+                <p>{article.introduction}</p> 
               </div>
-            </a>
-          ))}
-        </div>
-        )}
+            ))}
+            
+          </div>
+          )}
+
+          <div className="article-tags">
+            <button onClick={() => setSelectedTag(1)}
+              style={{
+                backgroundColor: selectedTag === 1 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+                color: selectedTag === 1 ? "var(--text-primary-color)" : "var(--text-second-color)",
+            }}>
+              Tech
+            </button>
+            <button onClick={() => setSelectedTag(2)}
+              style={{
+                backgroundColor: selectedTag === 2 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+                color: selectedTag === 2 ? "var(--text-primary-color)" : "var(--text-second-color)",
+            }}>
+              lifestyle
+            </button>
+            <button onClick={() => setSelectedTag(3)}
+              style={{
+                backgroundColor: selectedTag === 3 ? "var(--text-link-subcolor)" : "var(--primary-soft-color)",
+                color: selectedTag === 3 ? "var(--text-primary-color)" : "var(--text-second-color)",
+            }}>
+              Career
+            </button>
+          </div>
+        </ArticleCard>
+        <Link to="" className="internal-links read-more">Veja todos os artigos ➔</Link>
       </MainArticleSection>
     </MainPageSection>
   );
