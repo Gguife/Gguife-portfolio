@@ -98,7 +98,7 @@ export const Projects = () => {
           </button>
         </div>
       </ProjectsCard>
-      <Link to="" className="internal-links read-more">Veja todos os projetos ➔</Link>
+      <Link to="/projetos" className="internal-links read-more">Veja todos os projetos ➔</Link>
     </ProjectSection>
   );
 };
