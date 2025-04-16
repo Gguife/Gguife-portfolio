@@ -8,11 +8,11 @@ export default createGlobalStyle`
   --text-primary-color: #FaFaFa;
   --text-second-color:rgb(131, 131, 138);
   --text-link-color: #557287;
-  --text-link-test:rgb(58, 115, 155);
+  --text-link-subcolor:rgb(58, 115, 155);
 
   --text-title-size: 2rem;
   --text-subtitle-size: 1.5rem;
-  --text-medium-size: 1.rem;
+  --text-medium-size: 1rem;
   --text-small-size: .8rem; 
 
   --gap-high-size: 3rem;
