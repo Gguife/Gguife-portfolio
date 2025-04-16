@@ -1,6 +1,6 @@
 import { HeaderContainer, HeaderContent} from "./style";
 import { Link } from "react-router-dom";
-import {FaGithub , FaLinkedinIn, FaInstagram  } from 'react-icons/fa';
+import {FaGithub , FaLinkedinIn  } from 'react-icons/fa';
 
 
 export const Header = () => {
@@ -12,7 +12,6 @@ export const Header = () => {
         <div className="header-nav">
           <a href="" className="internal-links">Blog</a> 
           <ul>   
-            <li><a href="https://www.instagram.com/ggf.lnx" target='__blank'><FaInstagram  className="icons" /></a></li>
             <li><a href="https://github.com/Gguife" target='__blank'><FaGithub className="icons" /></a></li>
             <li><a href="https://www.linkedin.com/in/gguife/" target='__blank'><FaLinkedinIn className="icons" /></a></li>  
           </ul>	  
