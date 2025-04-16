@@ -118,7 +118,7 @@ padding: 0 2rem;
       line-height: 25px;
 
       span{
-        color: var(--text-link-test);
+        color: var(--text-link-subcolor);
         font-weight: 700;
       }
     }

@@ -1,7 +1,7 @@
 import { Projects } from "../../components/projects/index";
 import { Langs } from "../../components/lang/Langs";
 import { ScrollUp } from "../../components/scrollUp/ScrollUp";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logoPerfil.png";
 import { AboutMainContent, AboutContainer, AboutContentDesc, AboutSection} from "./style";
 
 //icons
