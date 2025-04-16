@@ -8,6 +8,7 @@ interface Article {
   title: string;
   introduction: string;
   tagId: number;
+  createdAt: string;
 }
 
 const tagNames: { [key: number]: string } = {
@@ -70,7 +71,7 @@ const MainPage: React.FC = () => {
       </MainAboutMeCard>
 
       <MainArticleSection>
-        <h1>Últimas postagens</h1>
+        <h1>Blog Pessoal</h1>
 
         <ArticleCard>
           {filteredArticles.length === 0 ? (
@@ -79,10 +80,10 @@ const MainPage: React.FC = () => {
             <div className="articles-list">
             {filteredArticles.map((article) => (
               <div className="article-card">
-                <span>sept 25, 2024 <span className="tag">{tagNames[article.tagId]}</span></span>
+                <span>{article.createdAt}<span className="tag">{tagNames[article.tagId]}</span></span>
                 <h3> 
                   {article.title} 
-                  <Link to="" className="internal-links read-about" key={article.id}>
+                  <Link to={`/artigo/${article.id}`} className="internal-links read-about" key={article.id}>
                   Leia sobre ➔
                   </Link>
                 </h3> 
@@ -117,7 +118,7 @@ const MainPage: React.FC = () => {
             </button>
           </div>
         </ArticleCard>
-        <Link to="" className="internal-links read-more">Veja todos os artigos ➔</Link>
+        <Link to="/blog" className="internal-links read-more">Veja todos os artigos ➔</Link>
       </MainArticleSection>
     </MainPageSection>
   );
