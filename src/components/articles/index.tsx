@@ -52,7 +52,6 @@ export const Articles = () => {
       (article) => article.tagId === tagId
     );
     setFilteredArticles(filtered);
-    console.log(filtered);
   }
 
 

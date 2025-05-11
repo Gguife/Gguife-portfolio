@@ -33,7 +33,6 @@ export const Projects = () => {
           `${import.meta.env.VITE_BACKEND_URL}/projects/${username}?limit=${limit}`
         );
 
-        console.log(response.data.projects);
         setProjects(response.data.projects);
       } catch (err: any) {
         console.error("Erro ao buscar projetos:", err);
