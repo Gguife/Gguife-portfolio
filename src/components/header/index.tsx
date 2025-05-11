@@ -8,9 +8,10 @@ export const Header = () => {
   return (
     <HeaderContainer id="home">
       <HeaderContent>
-        <Link to="/" className="logo">gguife</Link>
+        <Link to="/" className="logo">gguife<span className="logo-dev">.dev</span></Link>
         <div className="header-nav">
-          <a href="" className="internal-links">Blog</a> 
+          <Link to="/blog" className="internal-links">Blog</Link> 
+          <Link to="/projetos" className="internal-links">Projetos</Link> 
           <ul>   
             <li><a href="https://github.com/Gguife" target='__blank'><FaGithub className="icons" /></a></li>
             <li><a href="https://www.linkedin.com/in/gguife/" target='__blank'><FaLinkedinIn className="icons" /></a></li>  

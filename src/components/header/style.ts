@@ -23,6 +23,10 @@ margin: 0 auto;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary-color);
+
+    .logo-dev {
+      color: var(--text-link-color);
+    }
   }
     
   .header-nav{
@@ -84,7 +88,7 @@ margin: 0 auto;
     li{
       padding: .3rem;
       border: none;
-
+      
       a{
         font-size: var(--text-medium-size);
       }
