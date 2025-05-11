@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectSection = styled.section`
 margin-top: 2rem;
-padding: 2rem;
+padding: 1rem;
 margin-bottom: 2rem;
 
   h1{
@@ -41,7 +41,7 @@ margin-bottom: 2rem;
 
 
 export const ProjectsCard = styled.div`
-padding: 2rem 0rem;
+padding: 1rem 0rem;
 display: flex;
 justify-content: space-between;
 
@@ -175,6 +175,7 @@ justify-content: space-between;
   .project-categories {   
     margin-bottom: 0;   
     flex-direction: column; 
+    width: 80px;
   }
 
 }
