@@ -8,20 +8,17 @@ margin: 2rem auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 1000px;
     margin: 0 auto;
     
     
     img{
-      max-width: 1000px;
       width: 100%;
       margin: 0 auto;
-      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
       
     h2{
       font-size: 3rem;
-      color: var(--text-link-subcolor);
+      text-align: center;
     }
         
     p{
@@ -58,13 +55,13 @@ margin: 2rem auto;
         align-items: center;
         gap: .7rem;
         transition: .4s;
-        background-color: var(--text-link-subcolor);
+        background-color: var(--primary-soft-color);
         color: var(--text-primary-color);
         padding: .6rem 2rem;
         border-radius: 5px;
         
         &:hover {
-          background-color: var(--primary-soft-color);
+          background-color: var(--text-link-color);
         }
       }
     }
