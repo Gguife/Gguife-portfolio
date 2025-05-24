@@ -72,4 +72,29 @@ a{
   }
 }
 
+
+.more-pages {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: .9rem;
+  }
+
+  button {
+    background-color: transparent;
+    padding: .2rem 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    jutify-content: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
 `;
