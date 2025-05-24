@@ -13,7 +13,7 @@ export const MainRouter = () =>{
     {path: "/projeto/:id", element: <ProjectSelected />},
     {path: "/blog", element: <ArticlePage />},
     {path: "/artigo/:id", element: <ArticleSelected />},
-    { path: "*", element: <NotFound /> },
+    {path: "*", element: <NotFound />},
   ])
 
   return router;
