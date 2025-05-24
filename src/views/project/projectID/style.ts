@@ -2,47 +2,44 @@ import styled from "styled-components";
 
 export const ProjectSelectedSection = styled.section`
 padding: 1rem;
-margin-top: 2rem;
-
+margin: 2rem auto;
 
   .project-selected-content{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 1000px;
     margin: 0 auto;
     
     
     img{
-      max-width: 1000px;
       width: 100%;
       margin: 0 auto;
     }
       
     h2{
       font-size: 3rem;
-      color: #f67f01;
+      text-align: center;
     }
         
     p{
-      color: #DDDD;
+      color: #fff;  
+    } 
       
-      } 
-      
-      ul {
-        list-style: none;
+    ul {
+      list-style: none;
         
-        span{
-          font-size: 1.2rem;
-          font-weight: 700;
-          .tool-icon {
-          color: #f67f01;
+      span{
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-link-subcolor);
+        .tool-icon {
+          color: var(--text-link-subcolor);
           font-size: .9rem;  
         }
-        }
-        
+      }
+
       li {
-        color: #DDDD;
+        color: var(--text-second-color);
       }
     }
 
@@ -57,15 +54,14 @@ margin-top: 2rem;
         display: flex;
         align-items: center;
         gap: .7rem;
-        color: #FFF;
         transition: .4s;
-        background-color: #f67f01;;
-        color: #000;
+        background-color: var(--primary-soft-color);
+        color: var(--text-primary-color);
         padding: .6rem 2rem;
         border-radius: 5px;
         
         &:hover {
-          background-color: #FFF;
+          background-color: var(--text-link-color);
         }
       }
     }
@@ -78,18 +74,17 @@ margin-top: 2rem;
     .project-selected-content{
         
       h2{
-        font-size: 2.5rem;
+        font-size: var(--text-subtitle-size);
       }
         
       p{
-        color: #DDDD;
-        font-size: .8rem;
+        font-size: var(--text-small-size);
       } 
       
       ul {
 
         span{
-          font-size: .9rem;
+          font-size: var(--text-small-size);
       
           .tool-icon {
           font-size: .6rem;  
@@ -102,7 +97,7 @@ margin-top: 2rem;
     }
 
     .project-links{
-      font-size: .9rem;
+      font-size: var(--text-small-size);
       margin-top: 1rem;
       
       a{
