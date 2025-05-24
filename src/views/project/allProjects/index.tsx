@@ -53,7 +53,7 @@ const Articles = () => {
             {projects.map((project) => (
               <div className="project" key={project.id}>
                 <div className="project-image">
-                  <Link to={`/artigo/${project.id}`}><img src={project.imageUrl} alt="" /></Link>
+                  <Link to={`/projeto/${project.id}`}><img src={project.imageUrl} alt="" /></Link>
                 </div>
                 <div className="project-desc">
                   <h3>{project.title}</h3> 

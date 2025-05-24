@@ -54,12 +54,12 @@ const ProjectSelected = () => {
           </ul>
           <div className="project-links">
             {project.linkDeploy ? (
-              <a href={project.linkDeploy}>Versão web <TbWorldCode className="links-icon" /></a>
+              <a href={project.linkDeploy} target="_blank">Versão web <TbWorldCode className="links-icon" /></a>
             ) : (
               <span style={{display: "none"}}></span>
             )}
             {project.linkRepository ? (
-              <a href={project.linkRepository}>Código fonte<FaCode className="links-icon" /></a>
+              <a href={project.linkRepository} target="_blank">Código fonte<FaCode className="links-icon" /></a>
             ) : (
               <span style={{display: "none"}}></span>
             )}
