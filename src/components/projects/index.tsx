@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { ProjectSection, ProjectsCard } from "./style";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { MdDeveloperMode } from "react-icons/md";
+
+
 
 interface Project {
   id: number;
@@ -56,7 +59,7 @@ export const Projects = () => {
 
   return (
     <ProjectSection>
-      <h1>Projetos</h1>
+      <h1><MdDeveloperMode /> Projetos</h1>
       
       <ProjectsCard>
         {filteredProjects.length === 0 ? (
