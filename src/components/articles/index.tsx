@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MainArticleSection, ArticleCard } from "./style";
-
+import { MdArticle } from "react-icons/md";
 
 interface Article {
   id: number;
@@ -24,16 +24,16 @@ export const Articles = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
   const [selectedTag, setSelectedTag] = useState(1);
-  const limit = 9;
+  const limit = 4;
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const username = 'linux';
         const response = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/articles/${username}?limi=${limit}`
+          `${import.meta.env.VITE_BACKEND_URL}/articles/${username}?limit=${limit}`
         );
-
+        
         setArticles(response.data.articles);
       } catch (error) {
         console.error("Erro ao buscar artigos", error);
@@ -58,7 +58,7 @@ export const Articles = () => {
 
   return(
       <MainArticleSection>
-        <h1>Blog Pessoal</h1>
+        <h1> <MdArticle /> Blog Pessoal</h1>
 
         <ArticleCard>
           {filteredArticles.length === 0 ? (
