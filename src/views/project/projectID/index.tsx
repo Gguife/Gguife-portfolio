@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { ProjectSelectedSection } from "./style";
 import { TbWorldCode } from "react-icons/tb";
 import { FaCode } from "react-icons/fa";
-import { FaTools } from "react-icons/fa";
-import Image from "../../../assets/kenai.png";
+
+import { FcServices } from "react-icons/fc";
 
 
 interface Project {
@@ -42,15 +42,14 @@ const ProjectSelected = () => {
       {project ? (
         <div key={id} className="project-selected-content">
           <img
-            src={Image}
+            src={project.imageUrl}
             alt={`imagem do projeto ${project.title}`}
             />
           <h2>{project.title}</h2>
           <p>{project.content}</p>
           <ul className="tools">
-            <span>tecnologias <FaTools className="tool-icon"/></span>
               {project.tools.map((tool, index) => (
-                  <li key={index} className="tool">{tool}</li>
+                  <li key={index} className="tool"><FcServices />{tool}</li>
               ))}
           </ul>
           <div className="project-links">
